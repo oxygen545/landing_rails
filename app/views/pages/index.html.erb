@@ -1,0 +1,18 @@
+<div class="top"><h1>Main list of Pages</h1></div>
+  <div class="header"><h2>Header</h2></div>
+  <div class="main">
+      <div class="item"><p>add the content here</p></div>
+  </div>
+</div>
+<div class="naviation">
+  <ul>
+  <% @pages.each do |page| %>
+    <li><h3><%= link_to page.title, page %></h1></li>
+    <ul>
+        <%= Subpage.where(page_id: page.id).find_each do |sp| %>
+          <li><%= link_to sp.title, sp %></li>
+        <% end %>
+    </ul>
+  <% end %>
+  </ul>
+</div>

@@ -1,0 +1,13 @@
+<div class="body">
+  <div class="item">
+    <div class="heading">
+      <h1><%= @page.heading %></h1> by <strong><%= @page.user.name %></strong>
+    </div>
+    <div class="content"><%= raw(@page.content) %></div>
+  </div>
+  <div class="links">
+    <%= Subpage.where(page_id: @page.id).find_each do |sp| %>
+      <%= link_to sp.title, sp %> | 
+    <% end %>
+  </div>
+</div>
