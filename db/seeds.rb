@@ -1,6 +1,4 @@
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
-
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.production?
+AdminUser.create!([{email: 'admin@example.com', password: 'password', password_confirmation: 'password'}])
 
 Subpage.create!([
   {user_id: 1, page_id: 1, title: "Software Design Projects", link: "Software Development", content: "Projects related to sofware design", heading: ""}
