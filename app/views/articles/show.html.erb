@@ -1,4 +1,4 @@
-<%= render 'navigation/main' %>
+<%= render 'navigation/article' %>
 <p>
   <strong>User:</strong>
   <%= @article.user.name %>
@@ -12,7 +12,10 @@
       <% end %>
     <% end %>
 </p>
-<%= image_tag(@article.image) %>
+<!-- <% if @article.image != nil %>
+  < image_tag(@article.image) >
+<% end %>
+-->
 <p>
   <strong>Title:</strong>
   <%= @article.title %>
