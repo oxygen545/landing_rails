@@ -1,0 +1,22 @@
+<%= render 'navigation/homes' %>
+<h1>Homes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @homes.each do |home| %>
+      <tr>
+        <td><%= home.title %></td>
+        <td><%= home.description %></td>
+        <td><%= link_to 'Show', home %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
