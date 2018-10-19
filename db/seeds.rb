@@ -12,11 +12,11 @@ Subpage.create!([
   {user_id: 1, page_id: 1, title: "All About us", link: "Who We Are", content: "well the content will tell about how awesome we all are of course.", heading: "and what makes us tick"},
   {user_id: 1, page_id: 2, title: "FMN Website Information", link: "Website Development", content: "website related information", heading: "Coming Soon"}
 ])
-Webuser.create!([
-  {name: "damon", email: "damon@hopkins-family.org"}
-])
 Article.create!([
   {user_id: 1, subpage_id: 1, title: "Policies and Information", link: "Policies", content: "we have a lot of policies and stuff", heading: "Current Policies"},
   {user_id: 1, subpage_id: 2, title: "Style Changes", link: "Theme", content: "I installed this cool theme and now to get it working", heading: "Default Bootswatch Theme"},
   {user_id: 1, subpage_id: 2, title: "Cloud Storage Connection", link: "Could Storage", content: "Been working on the styling so I haven't messed with storing images just yet", heading: "GCS Headaches"}
+])
+Webuser.create!([
+  {name: "damon", email: "damon@hopkins-family.org"}
 ])
