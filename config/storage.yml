@@ -3,7 +3,7 @@ test:
   root: <%= Rails.root.join("tmp/storage") %>
 
 local:
-  service: GCS-local
+  service: GCS
   root: <%= Rails.root.join("storage") %>
 
 production:
@@ -21,16 +21,10 @@ production:
 google:
    service: GCS
    project: adhoc
-#   credentials: <%= Rails.root.join("../keys/adhoc-gcs-key.json") %>
-   bucket: adhoc_storage
-   credentials: <%= Rails.root.join(ENV['GOOGLE_CREDENTIALS']) %>
-
-google:
-   service: GCS-local
-   project: adhoc
    credentials: <%= Rails.root.join("../keys/adhoc-gcs-key.json") %>
    bucket: adhoc_storage
-#   credentials: Google::Auth::ServiceAccountCredentials.make_creds(scope: 'https://www.googleapis.com/auth/drive', json_key_io: StringIO.new(ENV['GOOGLE_APPLICATION_CREDENTIALS']))
+#   credentials: <%= Rails.root.join(ENV['GOOGLE_CREDENTIALS') %>
+
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:
 #   service: AzureStorage
