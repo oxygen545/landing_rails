@@ -1,14 +1,20 @@
 <%= render 'navigation/subpage' %>
-<p>Link: <%= link_to @subpage.link, p %></p>
 <h1><%= @subpage.title %></h1>
 <h2>Heading: <%= @subpage.heading %></h2>
+<div align=center>
+	<% if @subpage.image.attachment != nil %>
+		<%= image_tag(@subpage.image) %>
+	<% end %>
+</div>
 <p><%= raw(@subpage.content) %></p>
-<h4>Articles</h4>
+<h4>Contents</h4>
 <ul>
   <% Article.where(subpage_id: @subpage.id).find_each do |a| %>
     <li><%= link_to a.link, a %></li>
   <% end %>
 </ul>
-
+<p>
 <%= link_to 'Edit', edit_subpage_path(@subpage) %> |
 <%= link_to 'Back', subpages_path %>
+<%= link_to 'New', new_subpage_path %>
+</p>

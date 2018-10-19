@@ -38,6 +38,7 @@ gem 'activeadmin'
 gem 'bootstrap', '~> 4.1.3'
 gem "bootswatch", github: "thomaspark/bootswatch"
 gem 'seed_dump'
+gem 'google-cloud-storage'
 
 group :production do
   gem 'pg'

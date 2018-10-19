@@ -3,7 +3,7 @@ class ArticlesController < InheritedResources::Base
   private
 
     def article_params
-      params.require(:article).permit(:user_id, :subpage_id, :title, :link, :content, :heading, :image)
+      params.require(:article).permit(:user_id, :subpage_id, :title, :link, :content, :heading, :image, :thumbimage)
     end
 end
 
