@@ -23,7 +23,7 @@ google:
    project: adhoc
 #   credentials: <%= Rails.root.join("../keys/adhoc-gcs-key.json") %>
    bucket: adhoc_storage
-   credentials: <%= Rails.root.join(Google::Auth::ServiceAccountCredentials.make_creds(scope: 'https://www.googleapis.com/auth/drive', json_key_io: StringIO.new(ENV['GOOGLE_APPLICATION_CREDENTIALS']))) %>
+   credentials: <%= Rails.root.join(json_key_io: StringIO.new(ENV['GOOGLE_CREDENTIALS'])) %>
 
 google:
    service: GCS-local
