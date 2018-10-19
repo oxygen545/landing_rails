@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  resources :homes
+	resources :webusers
+	resources :homes
 	devise_for :users do
-	resources :pages do
-		 resources :subpages do
-			resources :articles
-		 end
-	end
+		resources :pages do
+			resources :subpages do
+				resources :articles
+		 	end
+		end
 	end
 	resources :pages do
 		resources :subpages do
@@ -20,4 +21,5 @@ Rails.application.routes.draw do
 	ActiveAdmin.routes(self)
 	root to: "homes#index"
 	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end
