@@ -1,40 +1,7 @@
 <%= render 'navigation/article' %>
-<p>
-  <strong>User:</strong>
-  <%= @article.user.name %>
-</p>
-
-<p>
-  <strong>Tree: </strong>
-    <%= Subpage.where(id: @article.subpage_id).find_each do |sp| %>
-      <%= Page.where(id: sp.page_id).find_each do |p| %>
-          <%= link_to p.link, p %> -> <%= link_to sp.link, sp %> -> .<br>
-      <% end %>
-    <% end %>
-</p>
-<!-- <% if @article.image != nil %>
-  < image_tag(@article.image) >
-<% end %>
--->
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Link:</strong>
-  <%= link_to @article.link, @article %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @article.content %>
-</p>
-
-<p>
-  <strong>Heading:</strong>
-  <%= @article.heading %>
-</p>
-
+<p>Link: <%= link_to @article.link, p %></p>
+<h1><%= @article.title %></h1>
+<h2>Heading: <%= @article.heading %></h2>
+<p><%= raw(@article.content) %></p>
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>

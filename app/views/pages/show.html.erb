@@ -1,14 +1,11 @@
 <%= render 'navigation/page' %>
-<div class="body">
-  <div class="item">
-    <div class="heading">
-      <h1><%= @page.heading %></h1> by <strong><%= @page.user.name %></strong>
-    </div>
-    <div class="content"><%= raw(@page.content) %></div>
-  </div>
-  <div class="links">
-    <%= Subpage.where(page_id: @page.id).find_each do |sp| %>
-      <%= link_to sp.title, sp %> | 
-    <% end %>
-  </div>
-</div>
+<p>Link: <%= link_to @page.link, p %></p>
+<h1><%= @page.title %></h1>
+<h2>Heading: <%= @page.heading %></h2>
+<p><%= raw(@page.content) %></p>
+<h4>Subpages</h4>
+<ul>
+  <% Subpage.where(page_id: @page.id).find_each do |sp| %>
+    <li><%= link_to sp.link, sp %></li>
+  <% end %>
+</ul>

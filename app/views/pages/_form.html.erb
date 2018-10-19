@@ -20,24 +20,22 @@
   </div>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
     <%= form.label :link %>
     <%= form.text_field :link %>
   </div>
-
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div class="field">
+    <%= form.label :heading %>
+    <%= form.text_area :heading %>
+  </div>
   <div class="field">
     <%= form.label :content %>
     <%= form.text_area :content %>
   </div>
 
-  <div class="field">
-    <%= form.label :heading %>
-    <%= form.text_area :heading %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>

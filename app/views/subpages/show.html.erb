@@ -1,39 +1,14 @@
 <%= render 'navigation/subpage' %>
-<p>
-  <strong>Title:</strong>
-  <%= @subpage.title %>
-</p>
-
-<p>
-  <strong>Heading:</strong>
-  <%= @subpage.heading %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @subpage.user.name %>
-</p>
-<p>
-  <strong>Link:</strong>
-  <%= link_to @subpage.link, @subpage %>
-</p>
-<p>
-  <strong>Content:</strong>
-  <%= @subpage.content %>
-</p>
-
-<p>
-  <strong>Found on Pages</strong>
-    <%= Page.where(id: @subpage.id).find_each do |p| %>
-      <%= link_to p.link, p %><br>
-    <% end %>
-</p>
-<p>
-  <strong>articles</strong>
-    <%= Article.where(subpage_id: @subpage.id).find_each do |p| %>
-      <%= link_to p.link, p %><br>
-    <% end %>
-</p>
+<p>Link: <%= link_to @subpage.link, p %></p>
+<h1><%= @subpage.title %></h1>
+<h2>Heading: <%= @subpage.heading %></h2>
+<p><%= raw(@subpage.content) %></p>
+<h4>Articles</h4>
+<ul>
+  <% Article.where(subpage_id: @subpage.id).find_each do |a| %>
+    <li><%= link_to a.link, a %></li>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_subpage_path(@subpage) %> |
 <%= link_to 'Back', subpages_path %>

@@ -1,13 +1,13 @@
-<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+<div class="navbar navbar-dark bg-dark">
       <div class="container">
-        <a href="<%= page_url %>" class="navbar-brand"><%= @page.link %></a>
+        <a href="<%= homes_url %>" class="navbar-brand">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<%= @page_url %>" id="<%= @page.link %>" ><%= @page.heading %><span class="caret"></span></a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="<%= @page_url %>" id="<%= @page.link %>" ><%= @page.link %><span class="caret"></span></a>
                 <div class="dropdown-menu" aria-labelledby="Pages">
                   <% Subpage.where(page_id: @page.id ).find_each do |sp| %>
                     <a class="dropdown-item" href="/pages/<%= @page.id %>/subpages/<%= sp.id %>"><%= sp.link %></a>

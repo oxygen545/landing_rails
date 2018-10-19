@@ -10,15 +10,13 @@
       </ul>
     </div>
   <% end %>
-
-<div class="field">
+  <div class="field">
     <%= form.label :user %>
     <% users_array = User.all.map { |user| [user.name, user.id] } %>
     <%= form.select(:user_id) do %>
     <%= options_for_select(users_array) %>
     <% end %>
   </div>
-  
   <div class="field">
     <%= form.label :subpage %>
     <% subpages_array = Subpage.all.map { |subpage| [subpage.link, subpage.id] } %>
@@ -26,32 +24,30 @@
       <%= options_for_select(subpages_array) %>
     <% end %>
   </div>
-
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_field :link %>
+  </div>
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
-
-<div class="field">
+  <div class="field">
+    <%= form.label :heading %>
+    <%= form.text_field :heading %>
+  </div>
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+  <div class="field">
     <%= form.label :image %>
     <%= form.file_field :image %>
   </div>
 
 
-  <div class="field">
-    <%= form.label :link %>
-    <%= form.text_field :link %>
-  </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
 
-  <div class="field">
-    <%= form.label :heading %>
-    <%= form.text_field :heading %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>

@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+<div class="navbar navbar-dark bg-dark">
   <div class="container">
     <a href="<%= @subpage_url %>" class="navbar-brand"><%= @subpage.link %></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,7 +10,7 @@
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/subpages" id="subpages" >Articles<span class="caret"></span></a>
           <div class="dropdown-menu" aria-labelledby="Articles">
             <% Article.where(subpage_id: @subpage.id).find_each do |a| %>
-              <a class="dropdown-item" href="/subpages/<%= @subpage.id %>/articles/<%= a.id %>"><%= a.link %></a>
+              <a class="dropdown-item" href="<%= @subpage.id %>/articles/<%= a.id %>"><%= a.link %></a>
             <% end %>
           </div>
         </li>
