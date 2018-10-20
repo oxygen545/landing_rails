@@ -1,0 +1,1000 @@
+  651  cd fmn-apothocary/
+  652  ls -al
+  653  cd .git/
+  654  ls -al
+  655  pico config 
+  656  cd ..
+  657  rm -rf fmn-apothocary
+  658  heroku git:remote -a fmn-apothocary
+  659  heroku git:remote -a https://github.com/oxygen545/FMNApothocary.git
+  660  git remote -v
+  661  cd fmn
+  662  git remote -v
+  663  heroku git:remote -a fmn-apothocary
+  664  git add .
+  665  git commit "added heroku remote stuff"
+  666  git commit -m"added heroku remote stuff"
+  667  git push heroku master
+  668  git remote -v
+  669  cd ..
+  670  ls
+  671  heroku git:clone -a fmn-apothocary
+  672  cd fmn
+  673  git add .
+  674  git commit -m "does this work??"
+  675  gti push heroku master
+  676  git push heroku master
+  677  heroku pg:info
+  678  bundle install
+  679  git add .
+  680  git commit -M"more gettng postgresql to  work on heroku"
+  681  git commit -m "more gettng postgresql to  work on heroku"
+  682  git push heroku master
+  683  heroku run rake db:migrate
+  684  heroku run rake db:seed
+  685  git commit -m "added production seeds to the db"
+  686  git push heroku master
+  687  git add .
+  688  cd .git/
+  689  cd ..
+  690  pico .gitignore 
+  691  git 
+  692  git commit -m "added production seeds to the db"
+  693  git push heroku master
+  694  heroku run rake db:seed
+  695  git add .
+  696  git commit -m "form changes"
+  697  git push heroku master
+  698  heroku logss
+  699  heroku logs
+  700  git add .
+  701  git commit -m "form changes"
+  702  git push heroku master
+  703  git push github master
+  704  git help push
+  705  git config
+  706  git config -l
+  707  git status
+  708  git push
+  709  heroku ps:scale web=
+  710  heroku ps:scale web=1
+  711  heroku logs --tail
+  712  git push
+  713  git push heroku master
+  714  git add .
+  715  git commit -m "added Procfile"
+  716  git push heroku master
+  717  heroku logs
+  718  cd rails
+  719  subl
+  720  cd ../new
+  721  ls
+  722  cd newapp/
+  723  ls
+  724  cd ..
+  725  newapp/newapp.sh adhoc
+  726  cd adhoc/
+  727  bundle install
+  728  git init
+  729  git add .
+  730  cp -r ../fmn/app/ ./
+  731  cp -r ../fmn/config/ ./
+  732  rails s
+  733  bundle install
+  734  rails s
+  735  cd ..
+  736  rm -rf adhoc
+  737  ./newapp/newapp.sh adhoc
+  738  kill %1
+  739  killall -9 ruby
+  740  ps -a
+  741  rm -rf adhoc
+  742  rails new adhoc
+  743  cp ./newapp/Gemfile ./adhoc/
+  744  cd adhoc/
+  745  bundle install
+  746  rails g devise:install
+  747  rails g devise:views
+  748  rails g devise User name:string
+  749  rails g scaffold Page title:string subtitle:string linktext:string content:text user:references
+  750  rails g scaffold Subpage title:string subtitle:string linktext:string content:text user:references page:references
+  751  rails g scaffold Article title:string subtitle:string linktext:string content:text user:references subpage:references
+  752  rails g active_admin:install
+  753  rails g active_admin:resource User
+  754  rails g active_admin:resource Page
+  755  rails g active_admin:resource Subpage
+  756  rails g active_admin:resource Article
+  757  rails db:migrate
+  758  rails db:seed
+  759  ../newapp/cpnew.sh 
+  760  rails s
+  761  exit
+  762  cd rails/
+  763  cd adhoc/
+  764  git init
+  765  get add .
+  766  git add .
+  767  git commit -am "inital commit #2 :)"
+  768  git remote add origin https://github.com/oxygen545/adhoc.git
+  769  git remote -v
+  770  git push origin master
+  771  git pull
+  772  git pull master
+  773  git pull remote master
+  774  git pull adhoc master
+  775  git push master
+  776  git push 
+  777  git push origin master
+  778  git pull
+  779  git pull master
+  780  git pull
+  781  git checkout https://github.com/oxygen545/adhoc.git
+  782  git pull https://github.com/oxygen545/adhoc.git
+  783  ls
+  784  cd .git/
+  785  ls
+  786  pico config
+  787  pico index 
+  788  cd ..
+  789  git remote add origin https://github.com/oxygen545/adhoc.git
+  790  git push origin master
+  791  heroku create
+  792  heroku rename
+  793  heroku rename sleepy-scrubland-95307
+  794  heroku rename sleepy-scrubland-95307 adhoc
+  795  heroku rename adhoc
+  796  heroku run rails db:rake
+  797  git push heroku master
+  798  heroku run rails db:rake
+  799  git commit -m "need to seed production to get started"
+  800  git push heroku master
+  801  git add .
+  802  git commit -m "need to seed production to get started"
+  803  git push heroku master
+  804  heroku run rails db:seed
+  805  heroku run rails db:migrate
+  806  heroku run rails db:seed
+  807  git add .
+  808  git commit -m "fixing user auth stuff"
+  809  git push heroku master
+  810  git add .
+  811  git commit -m "fixing user auth stuff again"
+  812  git push heroku master
+  813  heroku run rails db:migrate
+  814  heroku run rails db:seed
+  815  heroku run rails db:migrate
+  816  heroku run rails db:seed
+  817  heroku run rails db:migrate
+  818  git add .
+  819  git commit -m "arghhhh"
+  820  git push heroku master
+  821  heroku run rails db:migrate
+  822  heroku run rails db:seed
+  823  rails db:migrate
+  824  rails s
+  825  rails db:unload:schema
+  826  rails db:load:schema
+  827  rails db:help
+  828  rails db --help
+  829  rails db development load_schema
+  830  kill %1
+  831  ps -a
+  832  killall -9 ruby
+  833  ps -a
+  834  rails db:reset
+  835  rails db:seed
+  836  rails db:drop
+  837  rails db:reset
+  838  rails db:seed
+  839  git add 
+  840  git commit -M"lots of config stuff"
+  841  git commit -am "lots of config stuff"
+  842  heroku run rails db:reset
+  843  heroku run rails db:migrate
+  844  heroku run rails db:reset
+  845  git add .
+  846  git status
+  847  git commit -m "changed a mailer"
+  848  git push heroku master
+  849  heroku run rails db:migrate
+  850  heroku run rails db:seed
+  851  heroku run rails db:reset
+  852  heroku run rails db:reset DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+  853  git add .
+  854  git status
+  855  git push heroku master
+  856  git commit -am "confirmation headaches"
+  857  git push heroku master
+  858  heroku run rails db:migrate
+  859  heroku run rails db:seed
+  860  git push origin master
+  861  rails db:reset
+  862  rails db:migrate
+  863  rails db:seed
+  864  rails db:drop
+  865  rails db:create
+  866  rails db:migrate
+  867  rails db:seed
+  868  top
+  869  exit
+  870  rake routes
+  871  cd rails/
+  872  cd adhoc/
+  873  rake routes
+  874  cd ..
+  875  cd fmn
+  876  rake route
+  877  rake routes
+  878  cd ..
+  879  cd adhoc/
+  880  rails g devise:views
+  881  rails g devise:install
+  882  rails g devise User
+  883  rake routes
+  884  rake routes >routes.txt
+  885  pico routes.txt 
+  886  exit
+  887  cd rails/fmn/
+  888  rails c
+  889  cd ..
+  890  rails new blog
+  891  cd blog/
+  892  bundle install
+  893  rails g active_admin:install
+  894  rails g devise User name:string
+  895  rails g scaffold Page title:string subtitle:string linktext:string content:text user:references
+  896  rails g scaffold Subpage title:string subtitle:string linktext:string content:text user:references page:references
+  897  rails g scaffold Article title:string subtitle:string linktext:string content:text user:references subpage:references
+  898  rails g active_admin:resource User
+  899  rails g active_admin:resource Page
+  900  rails g active_admin:resource Subpage
+  901  rails g active_admin:resource Article
+  902  cd ..
+  903  mv adhoc adhoc_backup
+  904  mv blog adhoc
+  905  cd adhoc
+  906  bundle install
+  907  cd tmp/
+  908  ls
+  909  cd cache/
+  910  ls
+  911  cd ..
+  912  cp -r adhoc blog
+  913  cd blog/
+  914  ls
+  915  cd config/
+  916  cd ..
+  917  cd tmp
+  918  cd ..
+  919  rm -rf tmp
+  920  bundle install
+  921  rails s
+  922  rails db:migrate
+  923  rails s
+  924  bundle install
+  925  rails db:purge
+  926  rails db:reset
+  927  rails db:drop
+  928  rails db:create
+  929  rails db:migrate
+  930  rake db:reset
+  931  rails db:migrate
+  932  spring stop
+  933  exit
+  934  cd rails
+  935  cd adhoc/
+  936  rails g active_storage:install
+  937  which xkill
+  938  mount
+  939  sudo swap on
+  940  sudo swapon
+  941  swapon --help
+  942  swapon -all
+  943  swapon -a
+  944  swapon
+  945  swapon show
+  946  swapon --show
+  947  free
+  948  df -h
+  949  sudo fallocate -l 8G /swapfile
+  950  ls -lh /swapfile 
+  951  sudo chmod 600 /swapfile
+  952  sudo mkswap /swapfile
+  953  swapon -a
+  954  swapon -show
+  955  sudo swapon -a 
+  956  swapon -show
+  957  sudo swapon -show
+  958  sudo swapon /swapfile
+  959  sudo swapon -show
+  960  sudo pico /etc/fstab 
+  961  free -h
+  962  sudo swapon -show
+  963  cat /proc/sys/vm/swappiness 
+  964  cat /proc/sys/vm/vfs_cache_pressure 
+  965  sudo sysctl vm.vfs_cache_pressure=50
+  966  cat /proc/sys/vm/vfs_cache_pressure 
+  967  sudo pico /etc/sysctl.
+  968  sudo pico /etc/sysctl.conf 
+  969  rails -v
+  970  pico Gemfile.lock 
+  971  sudo gem install activestorage
+  972  bundle install
+  973  rails g active_storage:install
+  974  rails g activestorage:install
+  975  rails d
+  976  spring stop
+  977  rails s
+  978  git pull origin master
+  979  cd ..
+  980  it clone
+  981  git clone
+  982  git clone adhoc testblog
+  983  cd testblog/
+  984  ls
+  985  git pull master
+  986  git pull origin master
+  987  rm -rf .
+  988  rm -rf *
+  989  ls -al
+  990  cd ..
+  991  rm -rf testblog
+  992  mkdir mysite
+  993  cd mysite/
+  994  git init
+  995  cd ..
+  996  rm -rf mysite
+  997  rm -rf adhoc
+  998  rm -rf fmn
+  999  git clone https://github.com/oxygen545/adhoc.git adhoc
+ 1000  cd got
+ 1001  cd adhoc/
+ 1002  ls
+ 1003  rails s
+ 1004  rails db:migrate
+ 1005  rails db:seed
+ 1006  rails s
+ 1007  cd ..
+ 1008  git clone https://github.com/oxygen545/FMNApothocary.git fmn
+ 1009  cd fmn
+ 1010  rails db:migrate
+ 1011  rails db:seed
+ 1012  rails s
+ 1013  cd ..
+ 1014  cd blog/
+ 1015  rake routes
+ 1016  rails g devise:views
+ 1017  rails db:seed
+ 1018  spring stop
+ 1019  rails db:purge
+ 1020  rails db:reset
+ 1021  ls
+ 1022  rails db:create
+ 1023  ls db.
+ 1024  ls db/
+ 1025  rails db:migrate
+ 1026  cd ..
+ 1027  rails new t
+ 1028  cd t
+ 1029  ls db/
+ 1030  cd//
+ 1031  cd..
+ 1032  cd ..
+ 1033  cd blog/
+ 1034  bundle install
+ 1035  ls -al
+ 1036  ls -al /dev/
+ 1037  ls ./db/
+ 1038  rails s
+ 1039  cd ..
+ 1040  cd t
+ 1041  rails s
+ 1042  ls db/
+ 1043  rails db:migrate
+ 1044  ls db/
+ 1045  cd ../blog/
+ 1046  rm -rf tmp
+ 1047  bundle install
+ 1048  cd db/
+ 1049  ls
+ 1050  cd ..
+ 1051  rails db:migrate
+ 1052  rails db:seed
+ 1053  rails s
+ 1054  exit
+ 1055  cd rails/
+ 1056  rm -rf *
+ 1057  ccccccccc
+ 1058  ls
+ 1059  cd ..
+ 1060  ls
+ 1061  rm -rf pgadmin.log 
+ 1062  cd rails/
+ 1063  rails new clean
+ 1064  cd clean/
+ 1065  git init
+ 1066  git add .
+ 1067  git commit -am "Initial Commit"
+ 1068  git remote add origin https://github.com/oxygen545/clean_rails.git
+ 1069  git push -u origin master
+ 1070  bundle install
+ 1071  git add .
+ 1072  git commit -m"added activeadmin and the pg gem to development"
+ 1073  git push origin master
+ 1074  rails g devise User username:string 
+ 1075  rails g active_admin:install
+ 1076  rails g devise:install
+ 1077  bundle install
+ 1078  pico Gemfile
+ 1079  bundle install
+ 1080  git add .
+ 1081  git commit -m "forgot to add devise gem"
+ 1082  git push origin master
+ 1083  rails g active_admin:install
+ 1084  git add .
+ 1085  git commit -m "ran rails g active_admin:install"
+ 1086  git push origin master
+ 1087  git remote set-url origin git@github.com:oxygen545/clean_rails.git
+ 1088  git remote -v
+ 1089  git push origin
+ 1090  ssh-keygen -t rsa -b 4096 -C "damon@hopkins-family.org"
+ 1091  ssh-add ~/.ssh/id_rsa
+ 1092  cd ..
+ 1093  pico .ssh/id_rsa.pub 
+ 1094  xclip
+ 1095  sudo apt-get install xclip
+ 1096  xclip -sel clip < ~/.ssh/id_rsa.pub
+ 1097  cd rails/
+ 1098  cd clean/
+ 1099  git push origin master
+ 1100  subl
+ 1101  ruby -v
+ 1102  git add .
+ 1103  git status
+ 1104  git commit -"edited README.md"
+ 1105  git commit -m"edited README.md"
+ 1106  git push origin master
+ 1107  rails g scaffold User name:string email:string
+ 1108  rails g scaffold Page user:references title:string link:string content:text heading:text
+ 1109  rails g scaffold SubPage user:references page:references title:string link:string content:text heading:text
+ 1110  rails d scaffold SubPage user:references page:references title:string link:string content:text heading:text
+ 1111  rails g scaffold Subpage user:references page:references title:string link:string content:text heading:text
+ 1112  rails g scaffold Article user:references subpage:references title:string link:string content:text heading:text
+ 1113  git add .
+ 1114  git commit -m"added models via scaffold"
+ 1115  git push origin master
+ 1116  rails g active_admin:resource User
+ 1117  rails g active_admin:resource Page
+ 1118  rails g active_admin:resource Subpage
+ 1119  rails g active_admin:resource Article
+ 1120  git add .
+ 1121  git commit -m"set active_admin:resources"
+ 1122  git push origin master
+ 1123  cd ..
+ 1124  git -v
+ 1125  cd clean/
+ 1126  git -v
+ 1127  git remote -v
+ 1128  git clone git@github.com:oxygen545/FMNApothocary.git ../fmn
+ 1129  cd ../fmn/
+ 1130  cd ../clean/
+ 1131  gti add .
+ 1132  git add .
+ 1133  git commit -m"fixed routes and some heroku config setting"
+ 1134  git push origin master
+ 1135  git add .
+ 1136  git commit -m"typo"
+ 1137  git push origin master
+ 1138  rails db:migrate
+ 1139  rails db:seed
+ 1140  rails s
+ 1141  gti add .
+ 1142  git add .
+ 1143  git commit -m"more configuring active_admin"
+ 1144  git push origin master
+ 1145  rails s
+ 1146  git add .
+ 1147  git commit -m"looping through the references"
+ 1148  git push origin master
+ 1149  rails s
+ 1150  exit
+ 1151  cd /usr/lib/ruby/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource
+ 1152  locate ruby/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+ 1153  locate -f active_admin/resource/index.html.arb
+ 1154  locate active_admin/resource/index.html.arb
+ 1155  pico /var/lib/gems/2.5.0/gems/activeadmin-1.3.1/app/views/active_admin/resource/index.html.arb
+ 1156  cd rails/clean/
+ 1157  rails s
+ 1158  git add .
+ 1159  git commit -m "admin users not working in development but not testing so maybe this will fix it"
+ 1160  git push origin master
+ 1161  rails s
+ 1162  git status
+ 1163  git add .
+ 1164  git commit -m"added name to new user form on users edit and new"
+ 1165  git push origin master
+ 1166  rails s
+ 1167  exit
+ 1168  free -h
+ 1169  cd rails/
+ 1170  cd clean/
+ 1171  git add .
+ 1172  git commit -m "getting cleaned up"
+ 1173  git push origin master
+ 1174  git push heroku master
+ 1175  sudo gem "bootswatch", github: "thomaspark/bootswatch"
+ 1176  bundle install
+ 1177  free -h
+ 1178  cd ..
+ 1179  history tail -5
+ 1180  history tail 5
+ 1181  history 5
+ 1182  echo history 100 >hist
+ 1183  echo history 100 && >hist
+ 1184  pico hist 
+ 1185  history 100 | echo >>hist
+ 1186  history 100 | cat >>hist
+ 1187  git clone git@github.com:oxygen545/clean_rails.git Blog
+ 1188  cd Blog
+ 1189  rails db:migrate
+ 1190  bundle install
+ 1191  rails db:migrate
+ 1192  rails db:seed
+ 1193  rails s
+ 1194  rails g controller Home
+ 1195  spring stop
+ 1196  rails g controller Home
+ 1197  ps -a
+ 1198  killall -9 ruby
+ 1199  rails g controller Home
+ 1200  bundle install
+ 1201  rails g controller Home
+ 1202  rails s
+ 1203  git add .
+ 1204  git commit -m "added bootstrap CDN"
+ 1205  git push origin master
+ 1206  exit
+ 1207  cd rails/clean/
+ 1208  rake routes
+ 1209  git add .
+ 1210  git commit -m "code cleanup on views"
+ 1211  git push origin master
+ 1212  bundle install
+ 1213  git add .
+ 1214  git commit -m "moved sqlite3 gem to development and test"
+ 1215  git push origin master
+ 1216  sudo gem install bundler
+ 1217  git add .
+ 1218  git commit -m "moved sqlite3 gem to development and test"
+ 1219  bundle install
+ 1220  git add .
+ 1221  git commit -m "new bundler gem install"
+ 1222  rails s
+ 1223  git add .
+ 1224  git commit -m" added password reset stuff to admin/users"
+ 1225  git push origin master
+ 1226  heroku logs --tail
+ 1227  heroku login
+ 1228  heroku
+ 1229  heroku logs --tail
+ 1230  heroku logs
+ 1231  heroku logs -a adhoc --tail
+ 1232  heroku run rails db:reset
+ 1233  heroku run rails db:reset -a adhoc
+ 1234  set DISABLE_DATABASE_ENVIRONMENT_CHECK=1
+ 1235  echo $DISABLE_DATABASE_ENVIRONMENT_CHECK
+ 1236  heroku run rails db:migrate -a adhoc
+ 1237  heroku run rails db:seed -a adhoc
+ 1238  heroku logs -a adhoc --tail
+ 1239  tail -f ./log/development.log 
+ 1240  free -h
+ 1241  rails s
+ 1242  bundle install
+ 1243  rails s
+ 1244  bundle install
+ 1245  cd ..
+ 1246  cd Blog/
+ 1247  killall -9 ruby
+ 1248  ps -a
+ 1249  bundle install
+ 1250  rails s
+ 1251  rails g model Home
+ 1252  killall -9 ruby
+ 1253  ps -a
+ 1254  rails g model Home title description content:text
+ 1255  rails active_admin:resource Home
+ 1256  spring stop
+ 1257  rails active_admin:resource Home
+ 1258  spring stop
+ 1259  killall -9 ruby
+ 1260  rails g active_admin:resource Home
+ 1261  rails db:migrate
+ 1262  rails s
+ 1263  rails d active_admin:resource Home
+ 1264  ps -a
+ 1265  killall -9 ruby
+ 1266  ps -a
+ 1267  rails d active_admin:resource Home
+ 1268  rails g scaffold Home title: description: content:text
+ 1269  rails g active_admin:resource Home
+ 1270  rails s
+ 1271  git add .
+ 1272  git commit -m"Added Bootswatch, cyborg theme, Homes Controller displays themes. Page content stored in Homes table in Content field"
+ 1273  git push origin master
+ 1274  rails s
+ 1275  ps -a
+ 1276  spring stop
+ 1277  ps -a
+ 1278  rails s
+ 1279  git add .
+ 1280  git status
+ 1281  git commit -m "more styling added precomile javascript to the project"
+ 1282  git push origin master
+ 1283  rails s
+ 1284  git add .
+ 1285  git commit -m "Font Awesome CDN Added"
+ 1286  git push origin master
+ 1287  rails s
+ 1288  sudo gem install seed_dump
+ 1289  rake db:seed:dump
+ 1290  bundle install
+ 1291  spring stop
+ 1292  ps -a
+ 1293  rake db:seed:dump
+ 1294  rake --tasks
+ 1295  bundle install
+ 1296  rake --tasks
+ 1297  rake db:seed:dump
+ 1298  rails s
+ 1299  git add .
+ 1300  git commit -m"added ability to get out my seed data"
+ 1301  git push origin master
+ 1302  exit
+ 1303  cd rails
+ 1304  cd blog
+ 1305  ls
+ 1306  cd Blog/
+ 1307  subl
+ 1308  rails s
+ 1309  rails active_storage:install
+ 1310  rails add .
+ 1311  git add .
+ 1312  git commit -m"rails g active_storage:install"
+ 1313  git push origin master
+ 1314  rails db:migrate
+ 1315  rails s
+ 1316  rails db:seed
+ 1317  spring stop
+ 1318  rails s
+ 1319  git add .
+ 1320  git commit -m"added image and active storage abilities"
+ 1321  git push origin master
+ 1322  rake db:seed:dump
+ 1323  git add .
+ 1324  git commit -M"added article to seed file"
+ 1325  git commit -am "added article to seed file"
+ 1326  git push origin master
+ 1327  cd ..
+ 1328  subl .
+ 1329  exit
+ 1330  rails db:seed:dump
+ 1331  rails
+ 1332  rake db:seed:dump
+ 1333  cd 
+ 1334  cd rails/
+ 1335  cd Blog/
+ 1336  rake db:seed:dump
+ 1337  rails s
+ 1338  exit
+ 1339  cd rails/
+ 1340  cd Blog/
+ 1341  git add .
+ 1342  git commit -m"Working on dynamic menus"
+ 1343  git push origin master
+ 1344  exit
+ 1345  sudo apt-get libreoffice
+ 1346  sudo apt-get install libreoffice
+ 1347  exit
+ 1348  cd rails
+ 1349  cd Blog/
+ 1350  subl
+ 1351  bundle install
+ 1352  git add .
+ 1353  git commit -m"Gem file mods for less errors on Heroku"
+ 1354  git push origin master
+ 1355  pico .gitignore 
+ 1356  cd db
+ 1357  pico .gitignore 
+ 1358  ls -al
+ 1359  cd ..
+ 1360  ls -al
+ 1361  cd .git/
+ 1362  ls -al
+ 1363  pico config 
+ 1364  cd ..
+ 1365  git add .
+ 1366  git status
+ 1367  git show
+ 1368  git add .
+ 1369  git commit -m"config changed and seeds added"
+ 1370  git push heroku master
+ 1371  heroku run rails db:migrate -a adhoc
+ 1372  heroku run rails db:seed -a adhoc
+ 1373  git push origin master
+ 1374  cd .git/
+ 1375  pico config 
+ 1376  cd ..
+ 1377  git commit -m"Inital Commit"
+ 1378  git push -u origin master
+ 1379  git commit -m"Inital Commit"
+ 1380  git pull
+ 1381  git push
+ 1382  git --help
+ 1383  cd ..
+ 1384  mkdir testgit
+ 1385  cd testgit/
+ 1386  git init
+ 1387  cd .git/
+ 1388  ls -al
+ 1389  pico config 
+ 1390  git remote add origin git@github.com:oxygen545/Rails_Dev.git
+ 1391  ls -al
+ 1392  pico config 
+ 1393  cd ..
+ 1394  cd Blog/
+ 1395  git push -u origin master
+ 1396  ls -al
+ 1397  mv ../testgit/.git ./.git
+ 1398  git push -u origin master
+ 1399  pico .gitignore 
+ 1400  git commit -m"inital commit"
+ 1401  rm -rf .git
+ 1402  git init
+ 1403  git add .
+ 1404  git commit "inital remote"
+ 1405  git commit -m"inital commit"
+ 1406  git push origin master
+ 1407  git remote add origin git@github.com:oxygen545/Rails_Dev.git
+ 1408  git push -u origin master
+ 1409  git add .
+ 1410  git commit -am
+ 1411  git commit -am"seed file changes"
+ 1412  git push origin master
+ 1413  heroku run rails db:reset
+ 1414  heroku run rails db:reset -a adhoc
+ 1415  heroku run rails db:seed -a adhoc
+ 1416  rails s
+ 1417  git add .
+ 1418  git commit -m "menu work getting closer"
+ 1419  git push origin master
+ 1420  rails s
+ 1421  git add .
+ 1422  git commit -m "menu stuff changes"
+ 1423  git push origin master
+ 1424  exit
+ 1425  cd rails
+ 1426  subl
+ 1427  cd Blog/
+ 1428  git show
+ 1429  git commit -am"more changes"
+ 1430  git push origin master
+ 1431  rails s
+ 1432  exit
+ 1433  cd rails/
+ 1434  cd Blog/
+ 1435  locate bootstrap/scss/bootstrap
+ 1436  locate cyborg/variables
+ 1437  cd ~/.bundle/ruby/2.5.0/bootswatch-a53d1011b5d8/
+ 1438  ls
+ 1439  cd docs/
+ 1440  ls
+ 1441  cd
+ 1442  cd rails/
+ 1443  cd Blog/
+ 1444  git add .
+ 1445  git commit -m"Cyborg Theme fixes"
+ 1446  git push origin master
+ 1447  git add .
+ 1448  git commit -m"Styles imported via sass"
+ 1449  git push origin master
+ 1450  rails g scaffold Webuser name email
+ 1451  rails g active_admin:resource Webuser
+ 1452  rails db:migrate
+ 1453  rails s
+ 1454  rails db:seed
+ 1455  rails db:seed:dump
+ 1456  git status
+ 1457  git add .
+ 1458  git commit -m "Added webusers, different db seeds, changed theme to FMN style"
+ 1459  git push origin master
+ 1460  cd .git/
+ 1461  ls
+ 1462  pico config 
+ 1463  cd ..
+ 1464  git push origin master
+ 1465  rails s
+ 1466  exit
+ 1467  cd rails/
+ 1468  cd Blog/
+ 1469  rake db:seed:dump
+ 1470  git add .
+ 1471  git commit -m"cleaned up seeds file"
+ 1472  git push origin master
+ 1473  git add .
+ 1474  git commit -m"style issues"
+ 1475  git push origin master
+ 1476  heroku run rails db:reset
+ 1477  heroku run rails db:reset -a adhoc
+ 1478  heroku run rails db:migrate -a adhoc
+ 1479  heroku run rails db:seed -a adhoc
+ 1480  git add .
+ 1481  git commit -a
+ 1482  git push origin master
+ 1483  heroku run rails db:migrate -a adhoc
+ 1484  heroku run rails db:seed -a adhoc
+ 1485  heroku logs -tail -a adhoc
+ 1486  cd ..
+ 1487  ls
+ 1488  cd ..
+ 1489  ls
+ 1490  CD d
+ 1491  cd Downloads/
+ 1492  ls
+ 1493  cd ..
+ 1494  ls
+ 1495  cd Public/
+ 1496  ls
+ 1497  cd ..
+ 1498  cd rails
+ 1499  ls -al
+ 1500  cd ..
+ 1501  ls -al
+ 1502  rm -rf .pgadmin3
+ 1503  rm -rf .pgadmin_histoqueries 
+ 1504  ls -al
+ 1505  cd Documents/
+ 1506  ls
+ 1507  cd ..
+ 1508  cd rails/
+ 1509  ls -al
+ 1510  cd Blog/
+ 1511  rails s
+ 1512  rails db:migrate
+ 1513  rails db:reset
+ 1514  rails db:migrate
+ 1515  rails db:seed
+ 1516  cd db
+ 1517  ls
+ 1518  rm development.sqlite3 
+ 1519  rm test.sqlite3 
+ 1520  cd ..
+ 1521  rails db:migrate
+ 1522  rails db:seed
+ 1523  rails s
+ 1524  bundle install
+ 1525  rails db:migrate
+ 1526  rails s
+ 1527  git add .
+ 1528  git commit -m"Activestorage works!"
+ 1529  git push origin master
+ 1530  cd ..
+ 1531  cd Blog/
+ 1532  cd .git/
+ 1533  pico config 
+ 1534  cd 
+ 1535  cd rails/
+ 1536  heroku run rake db:reset -a fmn-apothocary
+ 1537  heroku run rake db:seed -a fmn-apothocary
+ 1538  heroku run rake db:migrate -a fmn-apothocary
+ 1539  heroku run rake db:seed -a fmn-apothocary
+ 1540  heroku logs -tail -a fmn-apothocary
+ 1541  ls keys/
+ 1542  heroku config:set GOOGLE_CREDENTIALS="$(<./keys/adhoc-gcs-key.json)"
+ 1543  heroku config:set GOOGLE_CREDENTIALS="$(<./keys/adhoc-gcs-key.json)" -a adhoc
+ 1544  heroku config:set GOOGLE_CREDENTIALS="$(<./keys/adhoc-gcs-key.json)" -a fmn-apothocary
+ 1545  cd Blog/
+ 1546  setenv GOOGLE_CREDENTIALS="$(<./keys/adhoc-gcs-key.json)" -a fmn-apothocary
+ 1547  setenv GOOGLE_CREDENTIALS="$(<../keys/adhoc-gcs-key.json)" -a fmn-apothocary
+ 1548  set GOOGLE_CREDENTIALS="$(<../keys/adhoc-gcs-key.json)" -a fmn-apothocary
+ 1549  export GOOGLE_CREDENTIALS
+ 1550  set
+ 1551  echo $GOOGLE_CREDENTIALS
+ 1552  set GOOGLE_CREDENTIALS "$(<../keys/adhoc-gcs-key.json)" -a fmn-apothocary
+ 1553  set GOOGLE_CREDENTIALS "$(<../keys/adhoc-gcs-key.json)"
+ 1554  echo $GOOGLE_CREDENTIALS
+ 1555  set BLAH=test
+ 1556  echo $BLAH
+ 1557  setenv
+ 1558  env
+ 1559  env BLAH=test
+ 1560  env
+ 1561  env BLAH=test ; export BLAH
+ 1562  env
+ 1563  set env BLAH=test ; export BLAH
+ 1564  env
+ 1565  pico ~/.bashrc 
+ 1566  git add .
+ 1567  git commit -am"credential tuning"
+ 1568  git push origin master
+ 1569  heroku logs -tail -a fmn-apothocary
+ 1570  git add .
+ 1571  git commit -am"credential tuning"
+ 1572  git push origin master
+ 1573  heroku logs -tail -a fmn-apothocary
+ 1574  git add .
+ 1575  git commit -am"credential tuning"
+ 1576  git push origin master
+ 1577  heroku logs -tail -a fmn-apothocary
+ 1578  git add .
+ 1579  git commit -am"credential tuning"
+ 1580  git push origin master
+ 1581  heroku logs -tail -a fmn-apothocary
+ 1582  git add .
+ 1583  git commit -am"credential tuning"
+ 1584  git show
+ 1585  git commit -am"credential tuning"
+ 1586  git push
+ 1587  git push origin master
+ 1588  subl
+ 1589  git add .
+ 1590  git commit -am"credential tuning"
+ 1591  git push origin master
+ 1592  heroku logs -tail -a fmn-apothocary
+ 1593  exit
+ 1594  cd  rails/
+ 1595  subl
+ 1596  heroku config
+ 1597  heroku config --help
+ 1598  heroku config:set GCS_PRIVATE_KEY_ID ed193e8631097172a8b8d69369c0a982a224a20e
+ 1599  heroku config:set GCS_PRIVATE_KEY_ID ed193e8631097172a8b8d69369c0a982a224a20e -a fmn-apothocary
+ 1600  heroku config:set GCS_PRIVATE_KEY_ID=ed193e8631097172a8b8d69369c0a982a224a20e -a fmn-apothocary
+ 1601  heroku config:set GCS_PRIVATE_KEY=-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQCxtOujrn0DQ8SD\nU2y1TpqhaqZEcZT8SPiQkbcSzWpYPdizp9ynQDGxKKDjvipoWOARbb8LV+jVflgn\nnCdzI5qo/geWStOJhq+EgDjTcjpjqoM/6YuXqxVo4lpz/g0NuAdrpVJo9BdJ94s/\nyrTE4/5CsaXuXuFP/Abvs2kMGq81ogEHxqWbnqvi1ajt57ulaYRvHp32hDiGJvNG\nyjOdFVVCTUOYZjN6/qDAiEjbkVx0Dj06pB1jfNejmdpPDpvMW8y2aoE5/cyhggu3\nFV2pUiX96lRNcBkwEpZnALBlsSpq+knvZOoY2iWYZRjoGmazVk0jRMEh/iDmeT5L\nZg/TNB+jAgMBAAECgf8sbQ573SNjrY1zR2fl68C8mez3L24PpC5/9e3OxYvQg6Wp\nRE3lgibqIz4VsXTooU9jDAy2yUNsHCntvRwfrMb9eIRtDkfUGdfHSEbslaIDSJ2H\nXNuJDzxK/Eugs+KPi3JPdwUjN+Kam0g0qniGwHjQM5lH/nBVjqwtQK0CWalzvqE+\nYOnbqgbWz3yp5gfThDgfRc5hXSfBUSD1px4XFKbtvQWgXtIfJaud0p2sNtl4aFLy\nuJSB3mm6b6KB59wK+rhwtUsEPLDXgSFgiYVn/yynvGMBXYubyELPPj38eab9desr\naoDw+TQxzE6NfhA2otLCOOYyqDaBjlM/L5dbDAECgYEA7aTtdQsqrB6OdEa4ovyy\n9REUytDI+jPbLwHxQACN/ao2nuLSn5K2glaaHnZ2S/B4N9MjDwugw5HPo0oOfr5v\nL8aC9l8UuaICRALB7yUbnc6zRrI/wSSSNAWNEQX96WY7JausTpb+y7NumkQXmUAQ\nujNRedrJKoBkKoKepofA9fkCgYEAv27Qj54kdcDt5sGkUcKGYNASHIkNGdhoOym4\npKO8X46G10AByfBo81v1PGnI+caO1/tS8W4QZa5kwz7WpUKRj0Iwm/TKPq635C2n\n1r4kNZOS4qQuJCYw6ANvanTUsyhLgb5h6hPyxTj0fTzQVqB5bVvEpZj7Ub8BwJK8\nDyDluXsCgYBY+F5Oa5fWSLpcnf2SR7lYNsTqCbC0u6VbvAZuR8bhKVC5u4HPbEYY\nFgQtU3yGgckAXXPKtjfCAF0UbS1wFivaXx+4zXAc76KZg87HkcT9F93WofVsghya\njVl6/htJvpR2Tgd8hNtvuAW4i7WqEmowy/W9AUQ/PUJDCBQNlNWRQQKBgAl8xHlZ\nrRTo6uF011/19BL4PO2NHUkaoI/OEYiXVM6nkac5VN1dPNZSyGSmGX/Hh2zM199/\nRPDFI9lJU/n8wpoG/cG88AkLP7HfUWIjKkg9eBojaOYBvorBINR11dTLOnLDrLad\nJnr/x54tVWX1rg7tbWGHo2z5umyA2TEmwDvhAoGBAIa6phLuzKplrfX/WxslsEIa\n7NjHu9inEbEODOo2PQYdPwWZd5hNylFZNtPEOv90LCoUHlifQo20hAy/B45A+GRG\njjMb1363otJHy0PcXwzPQ1cix3cixTzvYwQEjWhUyhIi308fSeaV1XjCsGFIhii4\nJW4g9PP3xV5Vi+0CTH0q\n-----END PRIVATE KEY-----\n -a fmn-apothocary
+ 1602  heroku config:set GCS_PRIVATE_KEY='-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQCxtOujrn0DQ8SD\nU2y1TpqhaqZEcZT8SPiQkbcSzWpYPdizp9ynQDGxKKDjvipoWOARbb8LV+jVflgn\nnCdzI5qo/geWStOJhq+EgDjTcjpjqoM/6YuXqxVo4lpz/g0NuAdrpVJo9BdJ94s/\nyrTE4/5CsaXuXuFP/Abvs2kMGq81ogEHxqWbnqvi1ajt57ulaYRvHp32hDiGJvNG\nyjOdFVVCTUOYZjN6/qDAiEjbkVx0Dj06pB1jfNejmdpPDpvMW8y2aoE5/cyhggu3\nFV2pUiX96lRNcBkwEpZnALBlsSpq+knvZOoY2iWYZRjoGmazVk0jRMEh/iDmeT5L\nZg/TNB+jAgMBAAECgf8sbQ573SNjrY1zR2fl68C8mez3L24PpC5/9e3OxYvQg6Wp\nRE3lgibqIz4VsXTooU9jDAy2yUNsHCntvRwfrMb9eIRtDkfUGdfHSEbslaIDSJ2H\nXNuJDzxK/Eugs+KPi3JPdwUjN+Kam0g0qniGwHjQM5lH/nBVjqwtQK0CWalzvqE+\nYOnbqgbWz3yp5gfThDgfRc5hXSfBUSD1px4XFKbtvQWgXtIfJaud0p2sNtl4aFLy\nuJSB3mm6b6KB59wK+rhwtUsEPLDXgSFgiYVn/yynvGMBXYubyELPPj38eab9desr\naoDw+TQxzE6NfhA2otLCOOYyqDaBjlM/L5dbDAECgYEA7aTtdQsqrB6OdEa4ovyy\n9REUytDI+jPbLwHxQACN/ao2nuLSn5K2glaaHnZ2S/B4N9MjDwugw5HPo0oOfr5v\nL8aC9l8UuaICRALB7yUbnc6zRrI/wSSSNAWNEQX96WY7JausTpb+y7NumkQXmUAQ\nujNRedrJKoBkKoKepofA9fkCgYEAv27Qj54kdcDt5sGkUcKGYNASHIkNGdhoOym4\npKO8X46G10AByfBo81v1PGnI+caO1/tS8W4QZa5kwz7WpUKRj0Iwm/TKPq635C2n\n1r4kNZOS4qQuJCYw6ANvanTUsyhLgb5h6hPyxTj0fTzQVqB5bVvEpZj7Ub8BwJK8\nDyDluXsCgYBY+F5Oa5fWSLpcnf2SR7lYNsTqCbC0u6VbvAZuR8bhKVC5u4HPbEYY\nFgQtU3yGgckAXXPKtjfCAF0UbS1wFivaXx+4zXAc76KZg87HkcT9F93WofVsghya\njVl6/htJvpR2Tgd8hNtvuAW4i7WqEmowy/W9AUQ/PUJDCBQNlNWRQQKBgAl8xHlZ\nrRTo6uF011/19BL4PO2NHUkaoI/OEYiXVM6nkac5VN1dPNZSyGSmGX/Hh2zM199/\nRPDFI9lJU/n8wpoG/cG88AkLP7HfUWIjKkg9eBojaOYBvorBINR11dTLOnLDrLad\nJnr/x54tVWX1rg7tbWGHo2z5umyA2TEmwDvhAoGBAIa6phLuzKplrfX/WxslsEIa\n7NjHu9inEbEODOo2PQYdPwWZd5hNylFZNtPEOv90LCoUHlifQo20hAy/B45A+GRG\njjMb1363otJHy0PcXwzPQ1cix3cixTzvYwQEjWhUyhIi308fSeaV1XjCsGFIhii4\nJW4g9PP3xV5Vi+0CTH0q\n-----END PRIVATE KEY-----\n' -a fmn-apothocary
+ 1603  cd Blog/
+ 1604  rail s
+ 1605  rails s
+ 1606  export GCS_PRIVATE_KEY='-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQCxtOujrn0DQ8SD\nU2y1TpqhaqZEcZT8SPiQkbcSzWpYPdizp9ynQDGxKKDjvipoWOARbb8LV+jVflgn\nnCdzI5qo/geWStOJhq+EgDjTcjpjqoM/6YuXqxVo4lpz/g0NuAdrpVJo9BdJ94s/\nyrTE4/5CsaXuXuFP/Abvs2kMGq81ogEHxqWbnqvi1ajt57ulaYRvHp32hDiGJvNG\nyjOdFVVCTUOYZjN6/qDAiEjbkVx0Dj06pB1jfNejmdpPDpvMW8y2aoE5/cyhggu3\nFV2pUiX96lRNcBkwEpZnALBlsSpq+knvZOoY2iWYZRjoGmazVk0jRMEh/iDmeT5L\nZg/TNB+jAgMBAAECgf8sbQ573SNjrY1zR2fl68C8mez3L24PpC5/9e3OxYvQg6Wp\nRE3lgibqIz4VsXTooU9jDAy2yUNsHCntvRwfrMb9eIRtDkfUGdfHSEbslaIDSJ2H\nXNuJDzxK/Eugs+KPi3JPdwUjN+Kam0g0qniGwHjQM5lH/nBVjqwtQK0CWalzvqE+\nYOnbqgbWz3yp5gfThDgfRc5hXSfBUSD1px4XFKbtvQWgXtIfJaud0p2sNtl4aFLy\nuJSB3mm6b6KB59wK+rhwtUsEPLDXgSFgiYVn/yynvGMBXYubyELPPj38eab9desr\naoDw+TQxzE6NfhA2otLCOOYyqDaBjlM/L5dbDAECgYEA7aTtdQsqrB6OdEa4ovyy\n9REUytDI+jPbLwHxQACN/ao2nuLSn5K2glaaHnZ2S/B4N9MjDwugw5HPo0oOfr5v\nL8aC9l8UuaICRALB7yUbnc6zRrI/wSSSNAWNEQX96WY7JausTpb+y7NumkQXmUAQ\nujNRedrJKoBkKoKepofA9fkCgYEAv27Qj54kdcDt5sGkUcKGYNASHIkNGdhoOym4\npKO8X46G10AByfBo81v1PGnI+caO1/tS8W4QZa5kwz7WpUKRj0Iwm/TKPq635C2n\n1r4kNZOS4qQuJCYw6ANvanTUsyhLgb5h6hPyxTj0fTzQVqB5bVvEpZj7Ub8BwJK8\nDyDluXsCgYBY+F5Oa5fWSLpcnf2SR7lYNsTqCbC0u6VbvAZuR8bhKVC5u4HPbEYY\nFgQtU3yGgckAXXPKtjfCAF0UbS1wFivaXx+4zXAc76KZg87HkcT9F93WofVsghya\njVl6/htJvpR2Tgd8hNtvuAW4i7WqEmowy/W9AUQ/PUJDCBQNlNWRQQKBgAl8xHlZ\nrRTo6uF011/19BL4PO2NHUkaoI/OEYiXVM6nkac5VN1dPNZSyGSmGX/Hh2zM199/\nRPDFI9lJU/n8wpoG/cG88AkLP7HfUWIjKkg9eBojaOYBvorBINR11dTLOnLDrLad\nJnr/x54tVWX1rg7tbWGHo2z5umyA2TEmwDvhAoGBAIa6phLuzKplrfX/WxslsEIa\n7NjHu9inEbEODOo2PQYdPwWZd5hNylFZNtPEOv90LCoUHlifQo20hAy/B45A+GRG\njjMb1363otJHy0PcXwzPQ1cix3cixTzvYwQEjWhUyhIi308fSeaV1XjCsGFIhii4\nJW4g9PP3xV5Vi+0CTH0q\n-----END PRIVATE KEY-----\n'
+ 1607  set
+ 1608  setecho $GCS_PRIVATE_KEY
+ 1609  echo $GCS_PRIVATE_KEY
+ 1610  export GCS_PRIVATE_KEY_ID=ed193e8631097172a8b8d69369c0a982a224a20e
+ 1611  rails s
+ 1612  env
+ 1613  heroku set --help
+ 1614  heroku config:show -a fmn-apococary
+ 1615  heroku help config
+ 1616  heroku config:edit -a fmn-apothocary
+ 1617  git add .
+ 1618  git commit -am"more stuff"
+ 1619  git push origin master
+ 1620  git add .
+ 1621  git commit -am"more stuff"
+ 1622  git push origin master
+ 1623  git add .
+ 1624  git commit -am"more stuff"
+ 1625  git push origin master
+ 1626  git add .
+ 1627  git commit -am"more stuff"
+ 1628  git push origin master
+ 1629  git add .
+ 1630  git commit -am"more stuff"
+ 1631  git push origin master
+ 1632  rails s
+ 1633  free
+ 1634  sudo swapon -a
+ 1635  free
+ 1636  sudo swapon
+ 1637  man swapopn
+ 1638  swapon --help
+ 1639  swapon -s
+ 1640  cat /etc/fstab 
+ 1641  rails s
+ 1642  heroku help config -a fmn-apothocary
+ 1643  heroku help config:edit -a fmn-apothocary
+ 1644  heroku config:edit -a fmn-apothocary
+ 1645  rails s
+ 1646  rails db:reset
+ 1647  rails s
+ 1648  echo $GOOGLE_CREDENTIALS
+ 1649  env
+ 1650  history 1000 >>hist
