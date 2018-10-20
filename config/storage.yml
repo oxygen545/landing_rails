@@ -19,7 +19,7 @@ google:
   service: GCS
   project: adhoc
   bucket: adhoc_storage
-  credentials: <%= JSON.parse(ENV['GOOGLE_CREDENTIALS']) %>
+  credentials: <%= Rails.root.join("..\keys\adhoc-gcs-key.json") %>
   #credentials:
   #  type: "service_account"
   #  project_id: "oxygen-project-observer"
