@@ -6,6 +6,11 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
+production:
+  service: Disk
+  root: <%= Rails.root.join("storage") %>
+
+
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
 #   service: S3
@@ -18,19 +23,9 @@ local:
 google:
   service: GCS
   project: adhoc
+  credentials: <%= Rails.root.join("path/to/gcs.keyfile") %>
   bucket: adhoc_storage
-  credentials: <%= Rails.root.join("..\keys\adhoc-gcs-key.json") %>
-  #credentials:
-  #  type: "service_account"
-  #  project_id: "oxygen-project-observer"
-  #  private_key_id: <%= ENV['GCS_PRIVATE_KEY_ID'] %>
-  #  private_key: <%= ENV['GCS_PRIVATE_KEY'] %>
-  #  client_email: "oxygen-project-observer@appspot.gserviceaccount.com"
-  #  client_id: ""
-  #  auth_uri: "https://accounts.google.com/o/oauth2/auth"
-  #  token_uri: "https://accounts.google.com/o/oauth2/token"
-  #  auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
-  #  client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/oxygen-project-observer%40appspot.gserviceaccount.com"
+
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:
 #   service: AzureStorage
