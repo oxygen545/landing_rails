@@ -22,7 +22,13 @@
           <a href="#">Back to top</a>
         </p>
         <p>Forget Me Not Natural Apothocary &copy; 2018</p>
-        <p>About us <a href="/pages/1">About us</a> or read our <a href="pages/2">blog</a>.</p>
+        <% @pa = Page.where(link: "About").first %>
+        <% @pb = Page.where(link: "Blog").first %>
+        <% if @pa != nil && @pb != nil%>
+        <p>Checkout the <a href="/pages/<%= @pa.id %>">About us</a> page or read our <a href="pages/<%= @pb.id %>">blog</a>.</p>
+        <% else %>
+        <p>FMN Natural Home Apothocary</p>
+        <% end %>
       </div>
     </footer>
     </main>    <!-- jQuery first, then Popper.js, then Bootstrap JS -->

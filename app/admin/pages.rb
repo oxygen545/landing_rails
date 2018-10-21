@@ -10,7 +10,6 @@ ActiveAdmin.register Page do
     column :link
     column :heading
     column :content
-    column :image
     actions
   end
 
@@ -25,11 +24,10 @@ ActiveAdmin.register Page do
       f.input :link
       f.input :heading
       f.input :content
-      f.input :image
     end
     f.actions
   end
 
-permit_params :user_id, :title, :link, :heading, :content, :image, :thumbimage
+permit_params :user_id, :title, :link, :heading, :content
 
 end

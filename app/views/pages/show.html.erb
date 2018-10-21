@@ -1,20 +1,21 @@
 <%= render 'navigation/page' %>
-<p>Link: <%= link_to @page.link, p %></p>
-<div align=center>	<% if @page.image.attachment != nil %>
-		<%= image_tag(@page.image) %>
-	<% end %>
+<div class="album py-5 bg-light">
+	<div class="container">
+		<div class="row">
+			<% if @page.image.attachment != nil %>
+				<%= image_tag(@page.image, :align => "center") %>
+			<% end %>
+			<h1><%= @page.title %></h1>
+			<h2><%= @page.heading %></h2>
+			<%= raw(@page.content) %>
+			<ul>
+			  <% Subpage.where(page_id: @page.id).find_each do |sp| %>
+			    <li><%= link_to sp.link, sp %></li>
+			  <% end %>
+			</ul>
+			<%= link_to 'Edit', edit_page_path(@page) %> |
+			<%= link_to 'Back', pages_path %> |
+			<%= link_to 'New', new_page_path %>
+		</div>
+	</div>
 </div>
-<h1><%= @page.title %></h1>
-<h2><%= @page.heading %></h2>
-<p><%= raw(@page.content) %></p>
-<h4>Contents</h4>
-<ul>
-  <% Subpage.where(page_id: @page.id).find_each do |sp| %>
-    <li><%= link_to sp.link, sp %></li>
-  <% end %>
-</ul>
-<p>
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %> |
-<%= link_to 'New', new_page_path %>
-</p>
