@@ -1,9 +1,7 @@
 User.create!([
   {name: "Damon Hopkins", email: "damon@hopkins-family.org"}
 ])
-AdminUser.create!([
-  {email: "admin@example.com", encrypted_password: "$2a$11$uf9Qmk55v80s1f7x5OyRUe.itI53jT./WLZ2mLDg9xZZj05qFjAVq", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil}
-])
+AdminUser.create!([email: 'admin@example.com', password: 'password', password_confirmation: 'password'])
 Subpage.create!([
   {user_id: 1, page_id: 1, title: "All About us", link: "Who We Are", content: "well the content will tell about how awesome we all are of course.", heading: "and what makes us tick"},
   {user_id: 1, page_id: 2, title: "FMN Website Information", link: "Website Development", content: "website related information", heading: "Coming Soon"},
