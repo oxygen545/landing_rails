@@ -1,6 +1,35 @@
-<div class="navbar navbar-dark bg-dark">
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">Our Subpages</h4>
+              <p class="text-muted">Her we find our our little subpages</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://www.facebook.com/ForgetMeNot.Natural/" class="text-white">Facebook</a></li>
+                <li><a href="https://www.etsy.com/shop/FMNNaturalApothecary" class="text-white">Etsy</a></li>
+                <li><a href="mailto://jennymannhopkins@gmail.com" class="text-white">Email me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="/" class="navbar-brand d-flex align-items-center">
+            <strong></strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    <div class="navbar navbar-dark bg-dark">
       <div class="container">
-        <a href="/pages" class="navbar-brand">Pages</a>
+        <a href="/subpages" class="navbar-brand">Subpages</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -8,23 +37,18 @@
           <ul class="navbar-nav">
             <% Subpage.find_each do |sp| %>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/subpages/<%= sp.id %>" id="Subpages"><%= sp.link %><span class="caret"></span></a>
-                <div class="dropdown-menu" aria-labelledby="Articles">
-                  <% Article.find_each do |a| %>
-                    <a class="dropdown-item" href="/subpages/<%= Subpage.find_by(id: a.subpage_id).id %>/articles/<%= a.id %>"><%= a.link %></a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/subpages/<%= sp.id %>" id="Subpages"><%= sp.link+" - " + sp.title %><span class="caret"></span></a>
+                <div class="dropdown-menu" aria-labelledby="Pages">
+                  <%= link_to sp.link + " - " + sp.title, sp , :class =>"dropdown-item" %>
+                  <% Article.where(subpage_id: sp.id).find_each do |a| %>
+                    <%= link_to a.link + " - " + a.title, a , :class =>"dropdown-item" %>
                   <% end %>
                 </div>
               </li>
             <% end %>
           </ul>
-          <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
+    </header>
+

@@ -1,19 +1,45 @@
 <%= render 'navigation/pages' %>
-<div class="top"><h1>Main list of Pages</h1></div>
-  <div class="header"><h2>Header</h2></div>
-  <div class="main">
-      <div class="item"><p>add the content here</p></div>
-  </div>
-</div>
-<div class="naviation">
-  <ul>
-  <% @pages.each do |page| %>
-    <li><h3><%= link_to page.title, page %></h1></li>
-    <ul>
-        <%= Subpage.where(page_id: page.id).find_each do |sp| %>
-          <li><%= link_to sp.title, sp %></li>
-        <% end %>
-    </ul>
-  <% end %>
-  </ul>
-</div>
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h2 class="jumbotron-heading">FMN Pages</h2>
+          <h1 class="jumbotron-heading">Page Index</h1>
+          <p class="lead text-muted">Below is a list of or Sections click the links below for easy access</p>
+          <p>
+            <%= link_to "Subpages", subpages_url, :class => "btn btn-primary my-2" %>
+            <%= link_to "Articles", articles_url,:class =>"btn btn-secondary my-2" %>
+          </p>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <% Page.find_each do |p| %>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <div class="card-img-top" align=center >
+                    <% if p.thumbimage.attachment != nil %>
+                      <br><%= image_tag(p.thumbimage) %><hr>
+                      <%= link_to p.heading, p %>
+                    <% else %>
+                      <br><%= link_to p.heading, p %>
+                    <% end %>
+                    <hr>
+                  </div>
+                  <div class="card-body" align=center>
+                    <p class="card-text"><%= p.title %><br><%= p.content %><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group" ><p>
+                        <%= link_to "Show", p, :class =>"btn btn-sm btn-primary my-2"%>
+                        <%= link_to "Edit", edit_page_path(p), :class =>"btn btn-sm btn-secondary my-2"%>
+                        <%= link_to "Destroy", p, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"btn btn-sm btn-secondary my-2"%>
+                      </p></div>
+                      <small class="text-muted"><%= time_ago_in_words(p.updated_at) %></small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
