@@ -1,5 +1,5 @@
 <% if @site_title == nil %>
-<% @site_title = "FMN Natural Apothecary" %>
+<% @site_title = "" %>
 <% end %>
 
 <!DOCTYPE html>
@@ -30,15 +30,15 @@
     <%= yield %>
     <footer class="text-muted">
       <div class="container">
-        <p class="float-left">Forget Me Not Natural apothecary &copy; 2018</p>
+        <p class="float-left"><%= @site_title %> &copy; 2018</p>
         <% @pa = Page.where(link: "About").first %>
-        <% @pb = Page.where(link: "Blog").first %>
+        <% @pb = Subpage.where(link: "Blog").first %>
         <% if @pa != nil && @pb != nil%>
-            <p>Checkout the <a href="/pages/<%= @pa.id %>">About us</a> page or read our <a href="pages/<%= @pb.id %>">blog</a>.</p>
+            <p>Checkout the <% link_to @pa.link pa %> page or read my <% link_to @pb.link @pb %>.</p>
         <% else %>
         <% end %>
       </div>
     </footer>
-    </main>    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    </main>
   </body>
 </html>
