@@ -10,12 +10,22 @@ Things I may want to cover:
 * System dependencies: devise, activeadmin
 
 * Configuration:
+
 	before deployment set @site_title in the aaplication.html.erb file
-	for deployment on Heroku set Heroku config variables:
+	 in development.rb set myapp to the appname -> config.action_mailer.default_url_options = { host: 'myappp.herokuapp.com', port: 3000 }
+
+	 for using gmail as your mail gateway:
+	create an app password by enabling 2-step authentication
+	 and usign this page: https://myaccount.google.com/apppasswords
+
+	for deployment on Heroku set Heroku config variables for google services:
 		heroku config:set GOOGLE_CREDENTIALS="$(<../keys/adhoc-gcs-key.json)" -a app_name
-		heroku config:set GOOGLE_PRIVATE_KEY_ID=Private key ID from keyfile -a app_name
-		heroku config:set GOOGLE_PRIVATE_KEY=Private key from keyfile -a app_name
-		heroku config:set GOOGLE_CLIENT_EMAIL=email of the service account -a app_name
+		heroku config:set GOOGLE_PRIVATE_KEY_ID="Private key ID from keyfile" -a app_name
+		heroku config:set GOOGLE_PRIVATE_KEY="Private key from keyfile" -a app_name
+		heroku config:set GOOGLE_CLIENT_EMAIL="email of the service account" -a app_name
+		heroku config:set GMAIL_DOMAIN="your.domain.com" -a app_name
+		heroku config:set GMAIL_USERNAME="username@your.domain.com" -a app_name
+		heroku config:set GMAIL_PASSWORD="YourAppPassword" -a app_name
 
 * Database creation: postgres in production for Heroku and sqlite3 for testing and development
 
