@@ -12,18 +12,18 @@
   </thead>
 
   <tbody>
-    <% @webusers.each do |webuser| %>
+    <%# @webusers.each do |webuser| %>
       <tr>
-        <td><%= webuser.name %></td>
-        <td><%= webuser.email %></td>
-        <td><%= link_to 'Show', webuser %></td>
-        <td><%= link_to 'Edit', edit_webuser_path(webuser) %></td>
-        <td><%= link_to 'Destroy', webuser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%# webuser.name %></td>
+        <td><%#webuser.email %></td>
+        <td><%# link_to 'Show', webuser %></td>
+        <td><%# link_to 'Edit', edit_webuser_path(webuser) %></td>
+        <td><%# link_to 'Destroy', webuser, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
+    <%# end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Webuser', new_webuser_path %>
+<%# link_to 'New Webuser', new_webuser_path %>

@@ -31,8 +31,8 @@
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group" ><p>
                         <%= link_to "Show", page_subpage_article_path(@subpage.page_id,@subpage.id,a), :class =>"btn btn-sm btn-primary my-2"%>
-                        <%= link_to "Edit", edit_page_subpage_article_path(@subpage.page_id,@subpage.id,a), :class =>"btn btn-sm btn-secondary my-2"%>
-                        <%= link_to "Destroy", a, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"btn btn-sm btn-secondary my-2"%>
+                        <%# link_to "Edit", edit_page_subpage_article_path(@subpage.page_id,@subpage.id,a), :class =>"btn btn-sm btn-secondary my-2"%>
+                        <%# link_to "Destroy", a, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"btn btn-sm btn-secondary my-2"%>
                       </p></div>
                       <small class="text-muted"><%= time_ago_in_words(a.updated_at) %></small>
                     </div>
