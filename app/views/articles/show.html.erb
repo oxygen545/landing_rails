@@ -1,9 +1,7 @@
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-		<div align="center">
-			<% if @article.image.attachment != nil %>
-				<%= image_tag(@article.image) %>
-			<% end %>
-		</div>
+	<% if @article.image.attachment != nil %>
+		<div align="center"><%= image_tag(@article.image), size: "1080"%></div>
+	<% end %>
 	<h1 align=left><%= @article.title %></h1>
 </main>
 <section class="jumbotron text-center">

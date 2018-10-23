@@ -24,8 +24,8 @@
   </head>
   <body>
     <%= render 'navigation/main' %>
-    <div class="alert"><p id="alert"><%= alert %></p></div>
-    <div class="notice"><p id="notice"><%= notice %></p></div>
+    <%= alert %>
+    <%= notice %>
     <main role="main">    
     <%= yield %>
     <footer class="text-muted">

@@ -5,8 +5,11 @@ AdminUser.create!([
 User.create!([
   {name: "Damon Hopkins", email: "damon@hopkins-family.org"}
 ])
+Home.create!([
+  {title: "Home", description:"placeholder", content: "content" }
+])
 Page.create!([
-  {user_id: 1, title: "FMN Natural Apothocary", link: "About", content: "Who we are and what we do goes in here so there's a lot of text to be written", heading: "About Us"},
+  {user_id: 1, title: "FMN Natural Apothecary", link: "About", content: "Who we are and what we do goes in here so there's a lot of text to be written", heading: "About Us"},
   {user_id: 1, title: "FMN News and Information", link: "News", content: "Latest information is contained in this section. Please feel free to read comment and enjoy.", heading: "Current up to the minute news"}
 ])
 Subpage.create!([

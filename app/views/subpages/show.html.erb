@@ -1,4 +1,7 @@
-<% render 'navigation/main' %>
+      <% if @subpage.image.attachment != nil %>
+        <div align="center"><%= image_tag(@subpage.image, size: "1080") %></div>
+        <hr>
+      <% end %>
       <section class="jumbotron text-center">
         <div class="container">
           <h2 class="jumbotron-heading"><%= @subpage.title %></h2>
