@@ -1,3 +1,12 @@
+  <% if @home == nil %>
+  <%    @home = Home.find_by( title: "Home") %>
+  <% end %>
+  <% if @home.image.attachment != nil %>
+    <div align="center">
+      <%= image_tag(@home.image, width: "1080") %>
+    </div>
+    <hr>
+  <% end %>
       <section class="jumbotron text-center">
         <div class="container">
           <h2 class="jumbotron-heading">Coming Soon!!</h2>
