@@ -1,16 +1,16 @@
-  651  cd fmn-apothocary/
+  651  cd fmn-apothecary/
   652  ls -al
   653  cd .git/
   654  ls -al
   655  pico config 
   656  cd ..
-  657  rm -rf fmn-apothocary
-  658  heroku git:remote -a fmn-apothocary
-  659  heroku git:remote -a https://github.com/oxygen545/FMNApothocary.git
+  657  rm -rf fmn-apothecary
+  658  heroku git:remote -a fmn-apothecary
+  659  heroku git:remote -a https://github.com/oxygen545/FMNapothecary.git
   660  git remote -v
   661  cd fmn
   662  git remote -v
-  663  heroku git:remote -a fmn-apothocary
+  663  heroku git:remote -a fmn-apothecary
   664  git add .
   665  git commit "added heroku remote stuff"
   666  git commit -m"added heroku remote stuff"
@@ -18,7 +18,7 @@
   668  git remote -v
   669  cd ..
   670  ls
-  671  heroku git:clone -a fmn-apothocary
+  671  heroku git:clone -a fmn-apothecary
   672  cd fmn
   673  git add .
   674  git commit -m "does this work??"
@@ -355,7 +355,7 @@
  1005  rails db:seed
  1006  rails s
  1007  cd ..
- 1008  git clone https://github.com/oxygen545/FMNApothocary.git fmn
+ 1008  git clone https://github.com/oxygen545/FMNapothecary.git fmn
  1009  cd fmn
  1010  rails db:migrate
  1011  rails db:seed
@@ -475,7 +475,7 @@
  1125  cd clean/
  1126  git -v
  1127  git remote -v
- 1128  git clone git@github.com:oxygen545/FMNApothocary.git ../fmn
+ 1128  git clone git@github.com:oxygen545/FMNapothecary.git ../fmn
  1129  cd ../fmn/
  1130  cd ../clean/
  1131  gti add .
@@ -883,23 +883,23 @@
  1533  pico config 
  1534  cd 
  1535  cd rails/
- 1536  heroku run rake db:reset -a fmn-apothocary
- 1537  heroku run rake db:seed -a fmn-apothocary
- 1538  heroku run rake db:migrate -a fmn-apothocary
- 1539  heroku run rake db:seed -a fmn-apothocary
- 1540  heroku logs -tail -a fmn-apothocary
+ 1536  heroku run rake db:reset -a fmn-apothecary
+ 1537  heroku run rake db:seed -a fmn-apothecary
+ 1538  heroku run rake db:migrate -a fmn-apothecary
+ 1539  heroku run rake db:seed -a fmn-apothecary
+ 1540  heroku logs -tail -a fmn-apothecary
  1541  ls keys/
  1542  heroku config:set GOOGLE_CREDENTIALS="$(<./keys/adhoc-gcs-key.json)"
  1543  heroku config:set GOOGLE_CREDENTIALS="$(<./keys/adhoc-gcs-key.json)" -a adhoc
- 1544  heroku config:set GOOGLE_CREDENTIALS="$(<./keys/adhoc-gcs-key.json)" -a fmn-apothocary
+ 1544  heroku config:set GOOGLE_CREDENTIALS="$(<./keys/adhoc-gcs-key.json)" -a fmn-apothecary
  1545  cd Blog/
- 1546  setenv GOOGLE_CREDENTIALS="$(<./keys/adhoc-gcs-key.json)" -a fmn-apothocary
- 1547  setenv GOOGLE_CREDENTIALS="$(<../keys/adhoc-gcs-key.json)" -a fmn-apothocary
- 1548  set GOOGLE_CREDENTIALS="$(<../keys/adhoc-gcs-key.json)" -a fmn-apothocary
+ 1546  setenv GOOGLE_CREDENTIALS="$(<./keys/adhoc-gcs-key.json)" -a fmn-apothecary
+ 1547  setenv GOOGLE_CREDENTIALS="$(<../keys/adhoc-gcs-key.json)" -a fmn-apothecary
+ 1548  set GOOGLE_CREDENTIALS="$(<../keys/adhoc-gcs-key.json)" -a fmn-apothecary
  1549  export GOOGLE_CREDENTIALS
  1550  set
  1551  echo $GOOGLE_CREDENTIALS
- 1552  set GOOGLE_CREDENTIALS "$(<../keys/adhoc-gcs-key.json)" -a fmn-apothocary
+ 1552  set GOOGLE_CREDENTIALS "$(<../keys/adhoc-gcs-key.json)" -a fmn-apothecary
  1553  set GOOGLE_CREDENTIALS "$(<../keys/adhoc-gcs-key.json)"
  1554  echo $GOOGLE_CREDENTIALS
  1555  set BLAH=test
@@ -916,19 +916,19 @@
  1566  git add .
  1567  git commit -am"credential tuning"
  1568  git push origin master
- 1569  heroku logs -tail -a fmn-apothocary
+ 1569  heroku logs -tail -a fmn-apothecary
  1570  git add .
  1571  git commit -am"credential tuning"
  1572  git push origin master
- 1573  heroku logs -tail -a fmn-apothocary
+ 1573  heroku logs -tail -a fmn-apothecary
  1574  git add .
  1575  git commit -am"credential tuning"
  1576  git push origin master
- 1577  heroku logs -tail -a fmn-apothocary
+ 1577  heroku logs -tail -a fmn-apothecary
  1578  git add .
  1579  git commit -am"credential tuning"
  1580  git push origin master
- 1581  heroku logs -tail -a fmn-apothocary
+ 1581  heroku logs -tail -a fmn-apothecary
  1582  git add .
  1583  git commit -am"credential tuning"
  1584  git show
@@ -939,17 +939,17 @@
  1589  git add .
  1590  git commit -am"credential tuning"
  1591  git push origin master
- 1592  heroku logs -tail -a fmn-apothocary
+ 1592  heroku logs -tail -a fmn-apothecary
  1593  exit
  1594  cd  rails/
  1595  subl
  1596  heroku config
  1597  heroku config --help
  1598  heroku config:set GCS_PRIVATE_KEY_ID ed193e8631097172a8b8d69369c0a982a224a20e
- 1599  heroku config:set GCS_PRIVATE_KEY_ID ed193e8631097172a8b8d69369c0a982a224a20e -a fmn-apothocary
- 1600  heroku config:set GCS_PRIVATE_KEY_ID=ed193e8631097172a8b8d69369c0a982a224a20e -a fmn-apothocary
- 1601  heroku config:set GCS_PRIVATE_KEY=-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQCxtOujrn0DQ8SD\nU2y1TpqhaqZEcZT8SPiQkbcSzWpYPdizp9ynQDGxKKDjvipoWOARbb8LV+jVflgn\nnCdzI5qo/geWStOJhq+EgDjTcjpjqoM/6YuXqxVo4lpz/g0NuAdrpVJo9BdJ94s/\nyrTE4/5CsaXuXuFP/Abvs2kMGq81ogEHxqWbnqvi1ajt57ulaYRvHp32hDiGJvNG\nyjOdFVVCTUOYZjN6/qDAiEjbkVx0Dj06pB1jfNejmdpPDpvMW8y2aoE5/cyhggu3\nFV2pUiX96lRNcBkwEpZnALBlsSpq+knvZOoY2iWYZRjoGmazVk0jRMEh/iDmeT5L\nZg/TNB+jAgMBAAECgf8sbQ573SNjrY1zR2fl68C8mez3L24PpC5/9e3OxYvQg6Wp\nRE3lgibqIz4VsXTooU9jDAy2yUNsHCntvRwfrMb9eIRtDkfUGdfHSEbslaIDSJ2H\nXNuJDzxK/Eugs+KPi3JPdwUjN+Kam0g0qniGwHjQM5lH/nBVjqwtQK0CWalzvqE+\nYOnbqgbWz3yp5gfThDgfRc5hXSfBUSD1px4XFKbtvQWgXtIfJaud0p2sNtl4aFLy\nuJSB3mm6b6KB59wK+rhwtUsEPLDXgSFgiYVn/yynvGMBXYubyELPPj38eab9desr\naoDw+TQxzE6NfhA2otLCOOYyqDaBjlM/L5dbDAECgYEA7aTtdQsqrB6OdEa4ovyy\n9REUytDI+jPbLwHxQACN/ao2nuLSn5K2glaaHnZ2S/B4N9MjDwugw5HPo0oOfr5v\nL8aC9l8UuaICRALB7yUbnc6zRrI/wSSSNAWNEQX96WY7JausTpb+y7NumkQXmUAQ\nujNRedrJKoBkKoKepofA9fkCgYEAv27Qj54kdcDt5sGkUcKGYNASHIkNGdhoOym4\npKO8X46G10AByfBo81v1PGnI+caO1/tS8W4QZa5kwz7WpUKRj0Iwm/TKPq635C2n\n1r4kNZOS4qQuJCYw6ANvanTUsyhLgb5h6hPyxTj0fTzQVqB5bVvEpZj7Ub8BwJK8\nDyDluXsCgYBY+F5Oa5fWSLpcnf2SR7lYNsTqCbC0u6VbvAZuR8bhKVC5u4HPbEYY\nFgQtU3yGgckAXXPKtjfCAF0UbS1wFivaXx+4zXAc76KZg87HkcT9F93WofVsghya\njVl6/htJvpR2Tgd8hNtvuAW4i7WqEmowy/W9AUQ/PUJDCBQNlNWRQQKBgAl8xHlZ\nrRTo6uF011/19BL4PO2NHUkaoI/OEYiXVM6nkac5VN1dPNZSyGSmGX/Hh2zM199/\nRPDFI9lJU/n8wpoG/cG88AkLP7HfUWIjKkg9eBojaOYBvorBINR11dTLOnLDrLad\nJnr/x54tVWX1rg7tbWGHo2z5umyA2TEmwDvhAoGBAIa6phLuzKplrfX/WxslsEIa\n7NjHu9inEbEODOo2PQYdPwWZd5hNylFZNtPEOv90LCoUHlifQo20hAy/B45A+GRG\njjMb1363otJHy0PcXwzPQ1cix3cixTzvYwQEjWhUyhIi308fSeaV1XjCsGFIhii4\nJW4g9PP3xV5Vi+0CTH0q\n-----END PRIVATE KEY-----\n -a fmn-apothocary
- 1602  heroku config:set GCS_PRIVATE_KEY='-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQCxtOujrn0DQ8SD\nU2y1TpqhaqZEcZT8SPiQkbcSzWpYPdizp9ynQDGxKKDjvipoWOARbb8LV+jVflgn\nnCdzI5qo/geWStOJhq+EgDjTcjpjqoM/6YuXqxVo4lpz/g0NuAdrpVJo9BdJ94s/\nyrTE4/5CsaXuXuFP/Abvs2kMGq81ogEHxqWbnqvi1ajt57ulaYRvHp32hDiGJvNG\nyjOdFVVCTUOYZjN6/qDAiEjbkVx0Dj06pB1jfNejmdpPDpvMW8y2aoE5/cyhggu3\nFV2pUiX96lRNcBkwEpZnALBlsSpq+knvZOoY2iWYZRjoGmazVk0jRMEh/iDmeT5L\nZg/TNB+jAgMBAAECgf8sbQ573SNjrY1zR2fl68C8mez3L24PpC5/9e3OxYvQg6Wp\nRE3lgibqIz4VsXTooU9jDAy2yUNsHCntvRwfrMb9eIRtDkfUGdfHSEbslaIDSJ2H\nXNuJDzxK/Eugs+KPi3JPdwUjN+Kam0g0qniGwHjQM5lH/nBVjqwtQK0CWalzvqE+\nYOnbqgbWz3yp5gfThDgfRc5hXSfBUSD1px4XFKbtvQWgXtIfJaud0p2sNtl4aFLy\nuJSB3mm6b6KB59wK+rhwtUsEPLDXgSFgiYVn/yynvGMBXYubyELPPj38eab9desr\naoDw+TQxzE6NfhA2otLCOOYyqDaBjlM/L5dbDAECgYEA7aTtdQsqrB6OdEa4ovyy\n9REUytDI+jPbLwHxQACN/ao2nuLSn5K2glaaHnZ2S/B4N9MjDwugw5HPo0oOfr5v\nL8aC9l8UuaICRALB7yUbnc6zRrI/wSSSNAWNEQX96WY7JausTpb+y7NumkQXmUAQ\nujNRedrJKoBkKoKepofA9fkCgYEAv27Qj54kdcDt5sGkUcKGYNASHIkNGdhoOym4\npKO8X46G10AByfBo81v1PGnI+caO1/tS8W4QZa5kwz7WpUKRj0Iwm/TKPq635C2n\n1r4kNZOS4qQuJCYw6ANvanTUsyhLgb5h6hPyxTj0fTzQVqB5bVvEpZj7Ub8BwJK8\nDyDluXsCgYBY+F5Oa5fWSLpcnf2SR7lYNsTqCbC0u6VbvAZuR8bhKVC5u4HPbEYY\nFgQtU3yGgckAXXPKtjfCAF0UbS1wFivaXx+4zXAc76KZg87HkcT9F93WofVsghya\njVl6/htJvpR2Tgd8hNtvuAW4i7WqEmowy/W9AUQ/PUJDCBQNlNWRQQKBgAl8xHlZ\nrRTo6uF011/19BL4PO2NHUkaoI/OEYiXVM6nkac5VN1dPNZSyGSmGX/Hh2zM199/\nRPDFI9lJU/n8wpoG/cG88AkLP7HfUWIjKkg9eBojaOYBvorBINR11dTLOnLDrLad\nJnr/x54tVWX1rg7tbWGHo2z5umyA2TEmwDvhAoGBAIa6phLuzKplrfX/WxslsEIa\n7NjHu9inEbEODOo2PQYdPwWZd5hNylFZNtPEOv90LCoUHlifQo20hAy/B45A+GRG\njjMb1363otJHy0PcXwzPQ1cix3cixTzvYwQEjWhUyhIi308fSeaV1XjCsGFIhii4\nJW4g9PP3xV5Vi+0CTH0q\n-----END PRIVATE KEY-----\n' -a fmn-apothocary
+ 1599  heroku config:set GCS_PRIVATE_KEY_ID ed193e8631097172a8b8d69369c0a982a224a20e -a fmn-apothecary
+ 1600  heroku config:set GCS_PRIVATE_KEY_ID=ed193e8631097172a8b8d69369c0a982a224a20e -a fmn-apothecary
+ 1601  heroku config:set GCS_PRIVATE_KEY=-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQCxtOujrn0DQ8SD\nU2y1TpqhaqZEcZT8SPiQkbcSzWpYPdizp9ynQDGxKKDjvipoWOARbb8LV+jVflgn\nnCdzI5qo/geWStOJhq+EgDjTcjpjqoM/6YuXqxVo4lpz/g0NuAdrpVJo9BdJ94s/\nyrTE4/5CsaXuXuFP/Abvs2kMGq81ogEHxqWbnqvi1ajt57ulaYRvHp32hDiGJvNG\nyjOdFVVCTUOYZjN6/qDAiEjbkVx0Dj06pB1jfNejmdpPDpvMW8y2aoE5/cyhggu3\nFV2pUiX96lRNcBkwEpZnALBlsSpq+knvZOoY2iWYZRjoGmazVk0jRMEh/iDmeT5L\nZg/TNB+jAgMBAAECgf8sbQ573SNjrY1zR2fl68C8mez3L24PpC5/9e3OxYvQg6Wp\nRE3lgibqIz4VsXTooU9jDAy2yUNsHCntvRwfrMb9eIRtDkfUGdfHSEbslaIDSJ2H\nXNuJDzxK/Eugs+KPi3JPdwUjN+Kam0g0qniGwHjQM5lH/nBVjqwtQK0CWalzvqE+\nYOnbqgbWz3yp5gfThDgfRc5hXSfBUSD1px4XFKbtvQWgXtIfJaud0p2sNtl4aFLy\nuJSB3mm6b6KB59wK+rhwtUsEPLDXgSFgiYVn/yynvGMBXYubyELPPj38eab9desr\naoDw+TQxzE6NfhA2otLCOOYyqDaBjlM/L5dbDAECgYEA7aTtdQsqrB6OdEa4ovyy\n9REUytDI+jPbLwHxQACN/ao2nuLSn5K2glaaHnZ2S/B4N9MjDwugw5HPo0oOfr5v\nL8aC9l8UuaICRALB7yUbnc6zRrI/wSSSNAWNEQX96WY7JausTpb+y7NumkQXmUAQ\nujNRedrJKoBkKoKepofA9fkCgYEAv27Qj54kdcDt5sGkUcKGYNASHIkNGdhoOym4\npKO8X46G10AByfBo81v1PGnI+caO1/tS8W4QZa5kwz7WpUKRj0Iwm/TKPq635C2n\n1r4kNZOS4qQuJCYw6ANvanTUsyhLgb5h6hPyxTj0fTzQVqB5bVvEpZj7Ub8BwJK8\nDyDluXsCgYBY+F5Oa5fWSLpcnf2SR7lYNsTqCbC0u6VbvAZuR8bhKVC5u4HPbEYY\nFgQtU3yGgckAXXPKtjfCAF0UbS1wFivaXx+4zXAc76KZg87HkcT9F93WofVsghya\njVl6/htJvpR2Tgd8hNtvuAW4i7WqEmowy/W9AUQ/PUJDCBQNlNWRQQKBgAl8xHlZ\nrRTo6uF011/19BL4PO2NHUkaoI/OEYiXVM6nkac5VN1dPNZSyGSmGX/Hh2zM199/\nRPDFI9lJU/n8wpoG/cG88AkLP7HfUWIjKkg9eBojaOYBvorBINR11dTLOnLDrLad\nJnr/x54tVWX1rg7tbWGHo2z5umyA2TEmwDvhAoGBAIa6phLuzKplrfX/WxslsEIa\n7NjHu9inEbEODOo2PQYdPwWZd5hNylFZNtPEOv90LCoUHlifQo20hAy/B45A+GRG\njjMb1363otJHy0PcXwzPQ1cix3cixTzvYwQEjWhUyhIi308fSeaV1XjCsGFIhii4\nJW4g9PP3xV5Vi+0CTH0q\n-----END PRIVATE KEY-----\n -a fmn-apothecary
+ 1602  heroku config:set GCS_PRIVATE_KEY='-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQCxtOujrn0DQ8SD\nU2y1TpqhaqZEcZT8SPiQkbcSzWpYPdizp9ynQDGxKKDjvipoWOARbb8LV+jVflgn\nnCdzI5qo/geWStOJhq+EgDjTcjpjqoM/6YuXqxVo4lpz/g0NuAdrpVJo9BdJ94s/\nyrTE4/5CsaXuXuFP/Abvs2kMGq81ogEHxqWbnqvi1ajt57ulaYRvHp32hDiGJvNG\nyjOdFVVCTUOYZjN6/qDAiEjbkVx0Dj06pB1jfNejmdpPDpvMW8y2aoE5/cyhggu3\nFV2pUiX96lRNcBkwEpZnALBlsSpq+knvZOoY2iWYZRjoGmazVk0jRMEh/iDmeT5L\nZg/TNB+jAgMBAAECgf8sbQ573SNjrY1zR2fl68C8mez3L24PpC5/9e3OxYvQg6Wp\nRE3lgibqIz4VsXTooU9jDAy2yUNsHCntvRwfrMb9eIRtDkfUGdfHSEbslaIDSJ2H\nXNuJDzxK/Eugs+KPi3JPdwUjN+Kam0g0qniGwHjQM5lH/nBVjqwtQK0CWalzvqE+\nYOnbqgbWz3yp5gfThDgfRc5hXSfBUSD1px4XFKbtvQWgXtIfJaud0p2sNtl4aFLy\nuJSB3mm6b6KB59wK+rhwtUsEPLDXgSFgiYVn/yynvGMBXYubyELPPj38eab9desr\naoDw+TQxzE6NfhA2otLCOOYyqDaBjlM/L5dbDAECgYEA7aTtdQsqrB6OdEa4ovyy\n9REUytDI+jPbLwHxQACN/ao2nuLSn5K2glaaHnZ2S/B4N9MjDwugw5HPo0oOfr5v\nL8aC9l8UuaICRALB7yUbnc6zRrI/wSSSNAWNEQX96WY7JausTpb+y7NumkQXmUAQ\nujNRedrJKoBkKoKepofA9fkCgYEAv27Qj54kdcDt5sGkUcKGYNASHIkNGdhoOym4\npKO8X46G10AByfBo81v1PGnI+caO1/tS8W4QZa5kwz7WpUKRj0Iwm/TKPq635C2n\n1r4kNZOS4qQuJCYw6ANvanTUsyhLgb5h6hPyxTj0fTzQVqB5bVvEpZj7Ub8BwJK8\nDyDluXsCgYBY+F5Oa5fWSLpcnf2SR7lYNsTqCbC0u6VbvAZuR8bhKVC5u4HPbEYY\nFgQtU3yGgckAXXPKtjfCAF0UbS1wFivaXx+4zXAc76KZg87HkcT9F93WofVsghya\njVl6/htJvpR2Tgd8hNtvuAW4i7WqEmowy/W9AUQ/PUJDCBQNlNWRQQKBgAl8xHlZ\nrRTo6uF011/19BL4PO2NHUkaoI/OEYiXVM6nkac5VN1dPNZSyGSmGX/Hh2zM199/\nRPDFI9lJU/n8wpoG/cG88AkLP7HfUWIjKkg9eBojaOYBvorBINR11dTLOnLDrLad\nJnr/x54tVWX1rg7tbWGHo2z5umyA2TEmwDvhAoGBAIa6phLuzKplrfX/WxslsEIa\n7NjHu9inEbEODOo2PQYdPwWZd5hNylFZNtPEOv90LCoUHlifQo20hAy/B45A+GRG\njjMb1363otJHy0PcXwzPQ1cix3cixTzvYwQEjWhUyhIi308fSeaV1XjCsGFIhii4\nJW4g9PP3xV5Vi+0CTH0q\n-----END PRIVATE KEY-----\n' -a fmn-apothecary
  1603  cd Blog/
  1604  rail s
  1605  rails s
@@ -963,7 +963,7 @@
  1613  heroku set --help
  1614  heroku config:show -a fmn-apococary
  1615  heroku help config
- 1616  heroku config:edit -a fmn-apothocary
+ 1616  heroku config:edit -a fmn-apothecary
  1617  git add .
  1618  git commit -am"more stuff"
  1619  git push origin master
@@ -989,9 +989,9 @@
  1639  swapon -s
  1640  cat /etc/fstab 
  1641  rails s
- 1642  heroku help config -a fmn-apothocary
- 1643  heroku help config:edit -a fmn-apothocary
- 1644  heroku config:edit -a fmn-apothocary
+ 1642  heroku help config -a fmn-apothecary
+ 1643  heroku help config:edit -a fmn-apothecary
+ 1644  heroku config:edit -a fmn-apothecary
  1645  rails s
  1646  rails db:reset
  1647  rails s

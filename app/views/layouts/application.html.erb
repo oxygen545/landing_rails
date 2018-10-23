@@ -1,3 +1,7 @@
+<% if @site_title == nil %>
+<% @site_title = "FMN Natural Apothecary" %>
+<% end %>
+
 <!DOCTYPE html>
 <html lang=en>
   <head>
@@ -5,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Album</title>
+    <title><% @site_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -26,7 +30,7 @@
     <%= yield %>
     <footer class="text-muted">
       <div class="container">
-        <p class="float-left">Forget Me Not Natural Apothocary &copy; 2018</p>
+        <p class="float-left">Forget Me Not Natural apothecary &copy; 2018</p>
         <% @pa = Page.where(link: "About").first %>
         <% @pb = Page.where(link: "Blog").first %>
         <% if @pa != nil && @pb != nil%>

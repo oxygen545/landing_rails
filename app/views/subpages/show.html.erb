@@ -1,19 +1,42 @@
-<h1><%= @subpage.title %></h1>
-<h2>Heading: <%= @subpage.heading %></h2>
-<div align=center>
-	<% if @subpage.image.attachment != nil %>
-		<%= image_tag(@subpage.image) %>
-	<% end %>
-</div>
-<p><%= raw(@subpage.content) %></p>
-<h4>Contents</h4>
-<ul>
-  <% Article.where(subpage_id: @subpage.id).find_each do |a| %>
-    <li><%= link_to a.link, a %></li>
-  <% end %>
-</ul>
-<p>
-<%= link_to 'Edit', edit_subpage_path(@subpage) %> |
-<%= link_to 'Back', subpages_path %>
-<%= link_to 'New', new_subpage_path %>
-</p>
+<% render 'navigation/main' %>
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h2 class="jumbotron-heading"><%= @subpage.title %></h2>
+          <h1 class="jumbotron-heading"><%= @subpage.heading %></h1>
+          <p class="lead text-muted"><%= raw(@subpage.content) %></p>
+          <p><%# add link for sales or other action items %></p>
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <% Article.where(subpage_id: @subpage.id).find_each do |a| %>
+              <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <div class="card-img-top" align=center >
+                    <% if a.thumbimage.attachment != nil %>
+                      <br><%= image_tag(a.thumbimage) %><hr>
+                      <%= link_to a.link, page_subpage_article_path(@subpage.page_id,@subpage.id,a) %>
+                    <% else %>
+                      <br><%= link_to a.link, page_subpage_article_path(@subpage.page_id,@subpage.id,a) %>
+                    <% end %>
+                    <hr>
+                  </div>
+                  <div class="card-body" align=center>
+                    <p class="card-text"><%= a.heading %><br><%= raw(a.content) %><br></p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group" ><p>
+                        <%= link_to "Show", page_subpage_article_path(@subpage.page_id,@subpage.id,a), :class =>"btn btn-sm btn-primary my-2"%>
+                        <%= link_to "Edit", edit_page_subpage_article_path(@subpage.page_id,@subpage.id,a), :class =>"btn btn-sm btn-secondary my-2"%>
+                        <%= link_to "Destroy", a, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"btn btn-sm btn-secondary my-2"%>
+                      </p></div>
+                      <small class="text-muted"><%= time_ago_in_words(a.updated_at) %></small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>

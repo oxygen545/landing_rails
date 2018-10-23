@@ -1,15 +1,16 @@
 <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
-	<h1><%= @article.title %></h1>
-	<h2><%= @article.heading %></h2>
-	<div align="center">
-		<% if @article.image.attachment != nil %>
-			<%= image_tag(@article.image) %>
-		<% end %>
-	</div>
-	<%= raw(@article.content) %>
-	<p>
-		<%= link_to 'Edit', edit_article_path(@article) %> |
-		<%= link_to 'Back', articles_path %> | 
-		<%= link_to 'New', new_article_path %>
-	</p>
+		<div align="center">
+			<% if @article.image.attachment != nil %>
+				<%= image_tag(@article.image) %>
+			<% end %>
+		</div>
+	<h1 align=left><%= @article.title %></h1>
 </main>
+<section class="jumbotron text-center">
+	<div class="container">
+	<h2 align="right"><%= @article.heading %></h2><br>
+	<p class="lead text-muted" align="right" ><%= raw(@article.content) %><p>
+		<%# link_to "Pages", pages_path, :class => "btn btn-primary my-2" %>		<%# link_to "Subpages", subpages_path,:class =>"btn btn-secondary my-2" %>
+	</p>
+	</div>
+</section>
