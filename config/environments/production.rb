@@ -100,7 +100,7 @@ Rails.application.configure do
     :port                 => 587,
     :domain               => ENV['GMAIL_DOMAIN'],
     :user_name            => ENV['GMAIL_USERNAME'],
-    :password             => ENV['GMAIL_PASSWORD'],
+    :password             => ENV['GOOGLE_SECRET'],
     :authentication       => 'login',
     :enable_starttls_auto => true,
   }
