@@ -104,6 +104,5 @@ Rails.application.configure do
     :password             => ENV['GOOGLE_SECRET'],
     :authentication       => 'login',
     :enable_starttls_auto => true,
-
   }
 end

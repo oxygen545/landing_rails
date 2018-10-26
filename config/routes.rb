@@ -5,6 +5,10 @@ Rails.application.routes.draw do
 			resources :articles
 		end
 	end
+	resources :subpages do
+		resources :articles
+	end
+	resources :articles
 	resources :homes
 	devise_for :users
 	devise_for :webusers

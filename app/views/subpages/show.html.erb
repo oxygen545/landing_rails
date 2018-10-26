@@ -1,4 +1,5 @@
-      <% if @subpage.image.attachment != nil %>
+<%= render 'navigation/main' %>
+        <% if @subpage.image.attachment != nil %>
         <div align="center"><%= image_tag(@subpage.image, width: "1080") %></div>
         <hr>
       <% end %>
