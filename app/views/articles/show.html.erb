@@ -1,7 +1,7 @@
 <%= render 'navigation/main' %>
   <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
 	<% if @article.image.attachment != nil %>
-		<div align="center"><%= image_tag(@article.image, width: "1080") %></div>
+		<div align="center"><%= image_tag(@article.image, width: "100%") %></div>
 	<% end %>
 	<h1 align=left><%= @article.title %></h1>
 </main>
