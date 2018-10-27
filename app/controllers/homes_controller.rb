@@ -1,5 +1,9 @@
 class HomesController < InheritedResources::Base
 
+	def show
+		
+	end
+
   private
 
     def home_params

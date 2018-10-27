@@ -39,6 +39,7 @@ gem 'bootstrap', '~> 4.1.3'
 gem "bootswatch", github: "thomaspark/bootswatch"
 gem 'google-cloud-storage'
 gem 'seed_dump'
+gem 'mini_racer'
 
 group :production do
   gem 'pg'
