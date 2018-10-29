@@ -1,0 +1,21 @@
+    <% @stylesheet_default_colors = "shared/lux" %>
+    <%# @stylesheet_default_colors = "shared/cyborg" %>
+    <% @stylesheet_default_theme = "shared/mycover" %>
+    <%# @stylesheet_default_theme = "shared/album" %>
+
+    <%= stylesheet_link_tag @stylesheet_default_colors %>
+    <%= stylesheet_link_tag @stylesheet_default_theme %>
+    </head>
+    <body class="text-center" >
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <%= render "navigation/header" %>
+            <main role="main" class="cover inner">
+	           <h1 class="cover-heading">Adhoc Web Services</h1>
+	           <p class="lead">Photos and more photos</p>
+	           <p class="lead">
+	           <%= link_to "Add", new_photo_url, :class =>"btn btn-lg btn-primary" %>
+	           </p>
+    	   </main>
+    	   <%= render "navigation/footer" %>
+        </div>
+    </body>

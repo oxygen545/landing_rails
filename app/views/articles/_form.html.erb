@@ -1,4 +1,4 @@
-<%= form_with(model: article, local: true) do |form| %>
+<%= form_with(model: article, local: true) do |f| %>
   <% if article.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
@@ -13,7 +13,7 @@
   <div class="field">
     <%= form.label :user %>
     <% users_array = User.all.map { |user| [user.name, user.id] } %>
-    <%= form.select(:user_id) do %>
+    <%= form.select(:user_id, :class =>".custom-select") do %>
     <%= options_for_select(users_array) %>
     <% end %>
   </div>
@@ -24,25 +24,33 @@
       <%= options_for_select(subpages_array) %>
     <% end %>
   </div>
-  <div class="field">
-    <%= form.label :link %>
-    <%= form.text_field :link %>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control mb-2" id="link" name="<%= controller %>[link]" placeholder="Link">
+    </div>
   </div>
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control mb-2" id="title" name="<%= controller %>[title]" placeholder="title">
+    </div>
   </div>
-  <div class="field">
-    <%= form.label :heading %>
-    <%= form.text_field :heading %>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control mb-2" id="heading" name="<%= controller %>[heading]" placeholder="Heading">
+    </div>
   </div>
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content, size: "80x20" %>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control mb-2" id="content" name="<%= controller %>[content]" placeholder="<div>raw</div> HTML content">
+    </div>
   </div>
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
+  <div class="form-row">
+    <div class="col">
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="image" name=<% controller %>[image]">
+        <label class="image-label" for="image">Choose Photo</label>
+      </div>
+    </div>
   </div>
   <div class="field">
     <%= form.label :thumbimage %>
@@ -54,6 +62,6 @@
 
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit %>
   </div>
 <% end %>

@@ -1,4 +1,4 @@
-<%= form_with(model: subpage, local: true) do |form| %>
+<%= form_with(model: subpage, local: true) do |f| %>
   <% if subpage.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(subpage.errors.count, "error") %> prohibited this subpage from being saved:</h2>
@@ -10,48 +10,59 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :user %>
-    <% users_array = User.all.map { |user| [user.name, user.id] } %>
-    <%= form.select(:user_id) do %>
-    <%= options_for_select(users_array) %>
-    <% end %>
-  </div>
   
-  <div class="field">
-    <%= form.label :page %>
-    <% pages_array = Page.all.map { |page| [page.link, page.id] } %>
-    <%= form.select(:page_id) do %>
-      <%= options_for_select(pages_array) %>
-    <% end %>
+  <div class="form-row">
+    <div class="col">  <% users_array = User.all.map { |user| [user.name, user.id] } %>
+      <%= form.select(:user_id, :class =>".custom-select") do %>
+        <%= options_for_select(users_array) %>
+      <% end %>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :link %>
-    <%= form.text_field :link %>
+  <div class="form-row">
+    <div class="col">
+      <% pages_array = Page.all.map { |user| [page.link, page.id] } %>
+      <%= form.select(:page_id, :class =>".custom-select") do %>
+        <%= options_for_select(pages_array) %>
+      <% end %>
+    </div>
   </div>
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control mb-2" id="link" name="<%= controller %>[link]" placeholder="Link">
+    </div>
   </div>
-  <div class="field">
-    <%= form.label :heading %>
-    <%= form.text_field :heading %>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control mb-2" id="title" name="<%= controller %>[title]" placeholder="title">
+    </div>
   </div>
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content, size: "60x20" %>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control mb-2" id="heading" name="<%= controller %>[heading]" placeholder="Heading">
+    </div>
   </div>
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control mb-2" id="content" name="<%= controller %>[content]" placeholder="<div>raw</div> HTML content">
+    </div>
   </div>
-  <div class="field">
-    <%= form.label :thumbimage %>
-    <%= form.file_field :thumbimage %>
+  <div class="form-row">
+    <div class="col">
+      <div class="image-file">
+        <input type="file" class="image-file-input" id="image" name=<% controller %>[image]">
+        <label class="image-label" for="image">Choose Photo</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <div class="thumbimage-file">
+        <input type="file" class="custom-file-input" id="thumbimage" name=<% controller %>[thumbimage]">
+        <label class="thumbimage-label" for="thumbimage">Choose Photo</label>
+      </div>
+    </div>
   </div>
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit %>
   </div>
 <% end %>

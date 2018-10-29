@@ -1,0 +1,11 @@
+      <div class="row m-auto">
+        <div class="col-xs">
+          <h4 class="masthead-brand ml-2 mr-5">Main</h4>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="/">Home</a>
+            <% Page.find_each do |p| %>
+              <%= link_to p.link, p, :class =>"nav-link" %>
+            <% end %>
+          </nav>
+        </div>
+      </div>

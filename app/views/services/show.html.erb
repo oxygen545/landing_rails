@@ -1,0 +1,29 @@
+	<% if @service.link == "Landing Page" %>
+		<%= stylesheet_link_tag "shared/mycover" %>
+		<%= stylesheet_link_tag "shared/lux" %>
+		<%
+			photo = Photo.find_by service_id: @service.id
+			if photo.image.attached?
+				@bg_image = url_for(photo.image)
+		 	else 
+				@bg_image = nil
+			end
+		%>
+		</head>
+    		<body class="text-center" >
+        		<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" background="<%= url_for(@bg_image) %>" >
+        		<%= render "navigation/header" %>
+            		<main role="main" class="cover inner">
+            			<h1 class="cover-heading"><%= @service.link %></h1>
+			           <p class="lead"><h3><%= @service.heading %></h3></p>
+			           <div class="lead"><%= @service.content %></div>
+		    	       <p class="lead">
+		        	   	<br><br><%= link_to "Learn More", "/services", :class =>"btn btn-lg btn-primary" %>
+			           </p>
+	    	   		</main>
+	    	   <%= render "navigation/footer" %>
+	        </div>
+	    </body>
+	    <% else %>
+
+	    <% end %>

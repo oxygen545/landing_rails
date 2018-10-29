@@ -1,0 +1,51 @@
+<%= form_with(model: @photo, local: true) do |f| %>
+  <% if @photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2>
+      <ul>
+      <% @photo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <div class="form-row">
+    <div class="col">
+      <% users_array = User.all.map { |user| [user.name, user.id] } %>
+      <%= f.select(:user_id, :class =>".custom-select") do %>
+        <%= options_for_select(users_array) %>
+      <% end %>
+    </div>
+  </div>
+   <div class="form-row">
+    <div class="col">
+    <% services_array = Service.all.map { |service| [service.link, service.id] } %>
+    <%= f.select(:service_id, :class =>".custom-select") do %>
+    <%= options_for_select(services_array) %>
+    <% end %>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control mb-2" id="caption" name="photo[caption]" placeholder="caption">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <input type="text" class="form-control mb-2" id="seq" name="photo[seq]" placeholder="1 to 100">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="imageFile">
+        <label class="image-file-label" for="imageFile" name="photo[seq]">Choose file</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <br><%= f.submit "Submit" , :class =>"btn btn-lg btn-primary" %>
+    </div>
+  </div>
+<% end %>

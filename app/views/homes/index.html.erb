@@ -1,11 +1,4 @@
-    <% @stylesheet_default_colors = "shared/lux" %>
-    <%# @stylesheet_default_colors = "shared/cyborg" %>
-    <% @stylesheet_default_theme = "shared/mycover" %>
-    <%# @stylesheet_default_theme = "shared/album" %>
-
-    <%= stylesheet_link_tag @stylesheet_default_colors %>
-    <%= stylesheet_link_tag @stylesheet_default_theme %>
-    </head>
+</head>
     <body class="text-center" >
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <%= render "navigation/header" %>
@@ -13,7 +6,7 @@
 	           <h1 class="cover-heading">Adhoc Web Services</h1>
 	           <p class="lead">Designing web services and products for you today!</p>
 	           <p class="lead">
-	           <%= link_to "Learn More", "/Services", :class =>"btn btn-lg btn-primary" %>
+	           <%= link_to "Learn More about what we do", Home.take, :class =>"btn btn-lg btn-primary" %>
 	           </p>
     	   </main>
     	   <%= render "navigation/footer" %>

@@ -1,0 +1,17 @@
+    </head>
+    <body class="text-center" >
+     	<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      		<%= render "navigation/header" %>
+    		<main role="main" class="cover inner">
+     			<h1 class="cover-heading">Adhoc Web Services</h1>
+     			<p class="lead">Designing web services and products for you today!</p>
+      			<div class="form row">
+        			<div class="form-group col-auto m-auto" margin="auto">
+    					<%= render 'form', service: @service %>
+    				</div>
+    			</div>
+			</main>
+		</div>
+		<%= link_to 'Back', services_path %>
+		<%= render "navigation/footer" %>
+	</body>

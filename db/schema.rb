@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_16_210733) do
+ActiveRecord::Schema.define(version: 2018_10_29_191304) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -91,6 +91,37 @@ ActiveRecord::Schema.define(version: 2018_10_16_210733) do
     t.datetime "updated_at", null: false
     t.index ["link"], name: "index_pages_on_link", unique: true
     t.index ["user_id"], name: "index_pages_on_user_id"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "service_id"
+    t.string "caption"
+    t.integer "seq"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["service_id"], name: "index_photos_on_service_id"
+    t.index ["user_id"], name: "index_photos_on_user_id"
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string "title"
+    t.string "link"
+    t.string "heading"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["link"], name: "index_services_on_link", unique: true
+  end
+
+  create_table "styles", force: :cascade do |t|
+    t.integer "home_id"
+    t.string "name"
+    t.string "sheet"
+    t.string "style"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["home_id"], name: "index_styles_on_home_id"
   end
 
   create_table "subpages", force: :cascade do |t|

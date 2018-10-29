@@ -8,7 +8,8 @@
     <title><%= @site_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "bootstrap/bootstrap.min.css" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "shared/lux" %>
+    <%= stylesheet_link_tag "shared/mycover" %>
     <%= yield %>
 </html>

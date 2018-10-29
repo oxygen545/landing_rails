@@ -1,5 +1,13 @@
 <h1>Editing Home</h1>
+<%
+	@placeholder_header = @home.title
+	@placeholder_body = @home.description
+	@placeholder_footer = @home.content
+	@value_header = @home.title
+	@value_body = @home.description
+	@value_footer = @home.content
 
+%>
 <%= render 'form', home: @home %>
 
 <%= link_to 'Show', @home %> |

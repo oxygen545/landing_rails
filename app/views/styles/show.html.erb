@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Home:</strong>
+  <%= @style.home.id %><%= @style.home.title %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @style.name %>
+</p>
+
+<p>
+  <strong>Sheet:</strong>
+  <%= @style.sheet %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @style.style %>
+</p>
+
+<%= link_to 'Edit', edit_style_path(@style) %> |
+<%= link_to 'Back', styles_path %>

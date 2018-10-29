@@ -1,6 +1,7 @@
-<%= render 'navigation/main' %>
-<div>
-	<%= raw(@home.title) %>
-	<%= image_tag(@home.image) %>
-	<%= raw(@home.content) %>
-</div>
+<% @mystyle = Style.find_by home: @home.id %>
+<%	if @mystyle %>
+		<%= stylesheet_link_tag @mystyle.style %>
+		<%= stylesheet_link_tag @mystyle.sheet %>
+<%	end %>
+</header>
+<%= raw @home.content.html_safe %>

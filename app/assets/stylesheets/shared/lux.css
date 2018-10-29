@@ -171,8 +171,7 @@ sup {
 }
 
 a {
-/*  color: #1a1a1a; */
-  color: #FF0000;
+  color: #1a1a1a;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
