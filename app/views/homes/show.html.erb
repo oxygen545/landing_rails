@@ -4,4 +4,10 @@
 		<%= stylesheet_link_tag @mystyle.sheet %>
 <%	end %>
 </header>
-<%= raw @home.content.html_safe %>
+    <body class="text-center" >
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+			<%= render "navigation/header" %>
+			<%= raw @home.content.html_safe %>
+			<%= render "navigation/footer" %>
+	</div>
+</body>
