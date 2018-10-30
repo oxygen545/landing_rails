@@ -1,6 +1,10 @@
 <%= render 'navigation/header' %>
 <div>
-	<%= image_tag(@photo.image) %>
-	<%= raw(@photo.content) %>
+	<% if @photo.image.attached? %>
+		<div><%= image_tag(@photo.image, :width=>"100%") %></div>
+	<% else %>
+		<p>No Image</p>
+	<% end %>
+	<%= @photo.caption %>
 </div>
 <%= render 'navigation/footer' %>

@@ -1,42 +1,43 @@
-<%= form_with(model: message, local: true) do |form| %>
-  <% if message.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
-
-      <ul>
-      <% message.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+<div class="form row">
+  <div class="form-group col-xs m-auto">
+    <%= form_with(model: message, local: true, validate: true) do |form| %>
+      <% if message.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(message.errors.count, "error") %> prohibited this message from being saved:</h2>
+            <ul>
+              <% message.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+      <div class="form-row">
+        <div class="col-xs">
+          <input type="text" autofocus="true" class="form-control mb-2 required" min-length=2 id="name" name="message[name]" placeholder="Your Name">
+        </div>
+      </div>
+      <div class="form-auto">
+        <div class="col-xs">
+          <input type="email" class="form-control mb-2 required" name="message[email]" id="email" placeholder="your@email.address.com">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-xs">
+          <input type="text" class="form-control mb-2 required" name="message[subject]" id="subject" placeholder="Subject">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-xs">
+          <div>
+            <textarea class="form-control required" id="body" name="message[body]" rows="5" placeholder="How can I help? Send me the details and lets chat." style="margin: auto; height: 40%;"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-xs m-auto">
+          <br><button type="submit" class="btn btn-primary mb-2">Send</button>
+        </div>
+      </div>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :subject %>
-    <%= form.text_field :subject %>
-  </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

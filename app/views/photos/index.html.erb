@@ -1,21 +1,26 @@
-    <% @stylesheet_default_colors = "shared/lux" %>
-    <%# @stylesheet_default_colors = "shared/cyborg" %>
-    <% @stylesheet_default_theme = "shared/mycover" %>
-    <%# @stylesheet_default_theme = "shared/album" %>
-
-    <%= stylesheet_link_tag @stylesheet_default_colors %>
-    <%= stylesheet_link_tag @stylesheet_default_theme %>
     </head>
     <body class="text-center" >
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <%= render "navigation/header" %>
-            <main role="main" class="cover inner">
-	           <h1 class="cover-heading">Adhoc Web Services</h1>
-	           <p class="lead">Photos and more photos</p>
-	           <p class="lead">
-	           <%= link_to "Add", new_photo_url, :class =>"btn btn-lg btn-primary" %>
-	           </p>
-    	   </main>
-    	   <%= render "navigation/footer" %>
+            <h1 class="cover-heading">Adhoc Web Services</h1>
+            <p class="lead">Photos and more photos</p>
+            <main>
+                <div class="row text-center" >
+                    <div class="col-xs-auto m-auto card-deck">
+                        <% Photo.find_each do |p| %>
+                            <div class="card" >
+                                <div class="card-header"><%= p.caption %></div>
+                                <div class="card-body mb-4 shadow-sm">
+                                    <%= image_tag(p.image, :width =>"100%") %><br>
+                                    <% service = Service.find(p.service_id) %>
+                                        Attached to Service <%=  Service.find(p.service_id).title %><br>
+                                    <%= link_to "edit", edit_photo_url(p) %>
+                                </div>
+                            </div>
+                        <% end %>
+                    </div>
+                </div>
+                <%= link_to "Add", new_photo_url, :class =>"btn btn-lg btn-primary" %>
+            </main>
+            <%= render "navigation/footer" %>
         </div>
     </body>

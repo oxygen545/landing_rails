@@ -9,43 +9,25 @@
       </ul>
     </div>
   <% end %>
-
-   <div class="form-row">
-    <div class="col">
-      <% users_array = User.all.map { |user| [user.name, user.id] } %>
-      <%= f.select(:user_id, :class =>".custom-select") do %>
-        <%= options_for_select(users_array) %>
-      <% end %>
-    </div>
-  </div>
-   <div class="form-row">
-    <div class="col">
-    <% services_array = Service.all.map { |service| [service.link, service.id] } %>
-    <%= f.select(:service_id, :class =>".custom-select") do %>
+ <main>
+  <% users_array = User.all.map { |user| [user.name, user.id] } %>
+  <%= f.select(:user_id, :class =>".custom-select") do %>
+      <%= options_for_select(users_array) %>
+  <% end %><br>
+  <% services_array = Service.all.map { |service| [service.link, service.id] } %>
+  <%= f.select(:service_id, :class =>".custom-select") do %>
     <%= options_for_select(services_array) %>
-    <% end %>
-  </div>
-  <div class="form-row">
-    <div class="col">
-      <input type="text" class="form-control mb-2" id="caption" name="photo[caption]" placeholder="caption">
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="col">
-      <input type="text" class="form-control mb-2" id="seq" name="photo[seq]" placeholder="1 to 100">
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="col">
-      <div class="custom-file">
-        <input type="file" class="custom-file-input" id="imageFile">
-        <label class="image-file-label" for="imageFile" name="photo[seq]">Choose file</label>
-      </div>
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="col">
-      <br><%= f.submit "Submit" , :class =>"btn btn-lg btn-primary" %>
-    </div>
-  </div>
+  <% end %><br>
+  <input type="text" class="form-control mb-2" id="caption" name="photo[caption]" value="<%= @photo.caption %>" placeholder="caption"><br>
+  <input type="text" class="form-control mb-2" id="seq" name="photo[seq]" value="<%= @photo.seq %>" placeholder="1 to 100"><br>
+  <%#
+    if @photo.image.attachment == nil
+      @photo_url = url_for(@photo.image)
+    else
+      @photo_url = "No File"
+    end
+  %>
+  <label class="image-file-label" for="imageFile" name="photo[image]">Choose file</label><br>
+  <%= f.file_field :image %>
+  <br><%= f.submit "Submit" , :class =>"btn btn-lg btn-primary" %>
 <% end %>
